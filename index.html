@@ -6,14 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="knoageo portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="">
+    <link rel="stylesheet" href="style\themestyle.css">
+    <!--リセットcss-->
+    
+    <script src="https://kit.fontawesome.com/9585971fc1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 <!--ヘッダーここから-->
 <header class="header">
 <!-- ロゴ -->
-<a href="top.php" id="logo"><img src="※ロゴの写真リンク※" alt="トップページに戻る"></a>
+<a href="top.php" id="logo"><img src="image/KNOAGEOロゴアイコン＋文字.png" alt="トップページに戻る"></a>
 
 <!-- PC用ナビゲーション -->
 <nav id="nav-pc">
@@ -28,24 +31,100 @@
   <a href="profile.php">自己紹介をよりくわしく</a>
   <span>扱うスキル一覧</span>
   <span>作例ライブラリ</span>
-  <a href="picturelib.php">自己紹介をよりくわしく</a>
-  <a href="profile.php">自己紹介をよりくわしく</a>
-  <a href="profile.php">自己紹介をよりくわしく</a>
-  <a href="profile.php">自己紹介をよりくわしく</a>
-  <a href="profile.php">自己紹介をよりくわしく</a>
-  <a href="profile.php">自己紹介をよりくわしく</a>
-  <a href="profile.php">自己紹介をよりくわしく</a>
-  <a href="profile.php">自己紹介をよりくわしく</a>
+  <a href="picturelib.php">写真</a>
+  <a href="picturelib.php#teiten">TEITEN（定点観測）</a>
+  <a href="illustlib.php">イラスト</a>
+  <a href="webloglib.php">Webサイト</a>
+  <a href="blog.php">ブログ</a>
+  <a href="originalsite.php">制作サイト</a>
+  <span>お問い合わせ</span>
+  <a href="contact.php">お問い合わせフォームへ</a>
 </nav>
- <!-- スマホ用メニューボタン -->
- <img id="menubutton" src="※ハンバーガーメニューイラスト※" alt="ナビゲーションを開く" onclick="document.getElementById('nav-bt').style.display = 'block'">
 
+ <!-- スマホ用メニューボタン -->
+ <a href="#" class="hamburger-menu"><i class="fa-solid fa-bars"></i>
+</a>
 </header>
 <!--ヘッダー終わり-->
 <!--メインはじめ-->
+<main>
+  <!--カバー-->
+  <section class="cover">
+    <hr class="light-topbar" />
+    <img src="./image/picture1.jpg" />
+    <div class="comment-wrapper">
+      <p class="title">お知らせ</p>
+      <div class="discription">
+        <p>New! 写真を更新しました 現在メンテナンス中です</p>
+        <p>2024.5.5</p>
+      </div>
+    </div>
+  </section>
+  <!--写真-->
+  <section class="picture-cor">
+    <hr class="light-mainbar" />
+    <img src="naranoshikawoireru">
+    <div class="comment-wrapper">
+      <p class="title">お知らせ</p>
+      <div class="discription">
+        <p>New! 写真を更新しました 現在メンテナンス中です</p>
+        <p>2024.5.5</p>
+      </div>
+    </div>
+  </section>
+   <!--イラスト-->
+   <section class="illust-cor">
+    <hr class="light-mainbar" />
+    <img src="naranoshikawoireru">
+    <div class="comment-wrapper">
+      <p class="title">お知らせ</p>
+      <div class="discription">
+        <p>New! 写真を更新しました 現在メンテナンス中です</p>
+        <p>2024.5.5</p>
+      </div>
+    </div>
+  </section>
+  <!--Webサイト作例-->
+  <section class="web-cor">
+    <hr class="light-mainbar" />
+    <img src="naranoshikawoireru">
+    <div class="comment-wrapper">
+      <p class="title">お知らせ</p>
+      <div class="discription">
+        <p>New! 写真を更新しました 現在メンテナンス中です</p>
+        <p>2024.5.5</p>
+      </div>
+    </div>
+  </section>
+  <!--その他関連-->
+  <section class="other-cor">
+    <hr class="light-mainbar" />
+    <img src="naranoshikawoireru">
+    <div class="comment-wrapper">
+      <p class="title">お知らせ</p>
+      <div class="discription">
+        <p>New! 写真を更新しました 現在メンテナンス中です</p>
+        <p>2024.5.5</p>
+      </div>
+    </div>
+  </section>
+  <!--自己紹介-->
+  <section class="profile-cor">
+    <hr class="light-mainbar" />
+    <img src="naranoshikawoireru">
+    <div class="comment-wrapper">
+      <p class="title">お知らせ</p>
+      <div class="discription">
+        <p>New! 写真を更新しました 現在メンテナンス中です</p>
+        <p>2024.5.5</p>
+      </div>
+    </div>
+  </section>
+</main>
 <!--メインおわり-->
 <!--フッターはじめ-->
 <footer>
+  <hr class="light-mainbar" />
 <span id="copyright">&copy;2025 KNOAGEO</span>
 </footer>
 <!--フッターおわり-->
