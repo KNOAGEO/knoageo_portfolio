@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="knoageo portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/themestyle.css">
+    <link rel="stylesheet" href="style/themestyle-sp.css">
     <link rel="stylesheet" href="style/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,11 +20,11 @@
 <!--ヘッダーここから-->
 <header class="header">
 <!-- ロゴ -->
-<a href="top.php" id="logo"><img src="image/KNOAGEOロゴ1.png" alt="トップページに戻る"></a>
+<a href="top.php" id="toplogo"><img src="image/KNOAGEOロゴ1.png" alt="トップページに戻る"></a>
 
  <!-- スマホ用メニューボタン -->
  <div class="hamburger-menu">
-  <i class="fas fa-bars"></i>
+  <img src="image/白樺.png">
 </div>
 
 <!-- PC用ナビ--><!--
@@ -45,8 +45,6 @@
 <!--スマホ用ナビ -->
 <nav id="nav-sp">
   <i class="fa-solid fa-xmark" onclick="document.getElementById('nav-sp').style.display = 'none'"></i>
-  <a id="logo-sp" href="index.php" onclick="document.getElementById('nav-sp').style.display = 'none'"><img
-   src="image/KNOAGEOロゴ1.png" alt="トップページに戻る"></a>
   <span>カテゴリー</span>
    <a href="picture.php">写真</a>
    <a href="illust.php">イラスト</a>
@@ -90,7 +88,7 @@
   <!--写真-->
   <section class="picture-cor">
     <hr class="light-mainbar" />
-    <img src="naranoshikawoireru">
+    <img src="image/top-picture1.jpg">
     <div class="category-wrapper">
       <p class="title">写真</p>
       <p class="subtitle">Picture</p>
@@ -105,7 +103,7 @@
    <!--イラスト-->
    <section class="illust-cor">
     <hr class="light-mainbar" />
-    <img src="naranoshikawoireru">
+    <img src="image/comming soonイラスト.png">
     <div class="category-wrapper">
       <p class="title">イラスト</p>
       <p class="subtitle">Illustration</p>
@@ -119,7 +117,7 @@
   <!--Webサイト作例-->
   <section class="web-cor">
     <hr class="light-mainbar" />
-    <img src="naranoshikawoireru">
+    <img src="image/comming soonイラスト.png">
     <div class="category-wrapper">
       <p class="title">Webサイト作例</p>
       <p class="subtitle">Website log</p>
@@ -130,7 +128,7 @@
   <!--その他関連-->
   <section class="other-cor">
     <hr class="light-mainbar" />
-    <img src="naranoshikawoireru">
+    <img src="image/comming soonイラスト.png">
     <div class="category-wrapper">
       <p class="title">その他関連</p>
       <p class="subtitle">Other</p>
@@ -141,9 +139,9 @@
   <!--自己紹介-->
   <section class="profile-cor">
     <hr class="light-mainbar" />
-    <img src="naranoshikawoireru">
+    <p class="title">自己紹介</p>
+    <img src="image/comming soonイラスト.png">
     <div class="category-wrapper">
-      <p class="title">自己紹介</p>
     </div>
   </section>
 </main>
@@ -152,7 +150,9 @@
 <footer>
   <hr class="light-mainbar" />
   <a href="top.php" class="footerlogo"><img src="image/KNOAGEOロゴ1.png" alt="トップページに戻る"></a>
+  <div class="footerarea">
 <span id="copyright">&copy;2025 KNOAGEO</span>
+  </div>
 </footer>
 <!--フッターおわり-->
 </body>
