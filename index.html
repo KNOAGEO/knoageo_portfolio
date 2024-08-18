@@ -21,10 +21,12 @@
 <!--ヘッダーここから-->
 <header class="header">
 <!-- ロゴ -->
-<a href="index.html" id="toplogo"><img src="image/KNOAGEOロゴ1.png" alt="トップページに戻る"></a>
-
+<div class="logoarea">
+<a href="#" id="toplogo"><img src="image/KNOAGEOロゴ1.png" alt="トップページに戻る"></a>
  <!-- スマホ用メニューボタン -->
-  <img class="hamburger-menu" src="image/白樺.png" alt="ナビゲーションメニューを開く" onclick="document.getElementById('nav-sp').style.display = 'block'" >
+<div class="hamburger-menu">
+  <a href="#"><img src="image/白樺.png" alt="ナビゲーションメニューを開く" onclick="document.getElementById('nav-sp').style.display = 'block'" ></a>
+</div>
 
 <!-- PC用ナビ--><!--
 <nav id="nav-pc">
@@ -73,9 +75,11 @@
    <span>お問い合わせ</span>
    <a href="contact.php">お問い合わせフォームへ</a>
  </nav>
+</div>
+<hr class="light-topbar" />
 </header>
 <!--ヘッダー終わり-->
-<hr class="light-topbar" />
+
 
 <!--メイン-->
 <main>
@@ -86,29 +90,30 @@
   <section>
     <div class="category-wrapper">
       <p class="title">お知らせ</p>
-      <div class="discription">
+      <div class="description">
         <p>New! 写真を更新しました 現在メンテナンス中です</p>
         <span id="date">2024.5.5</span>
       </div>
     </div>
   </section>
-
+  <!-- カテゴリ枠 -->
+  <div class="sec">
   <!--写真-->
   <section class="picture-cor">
     <hr class="light-mainbar" />
-    <p class="title">写真</p>
-    <p class="subtitle">Picture</p>
+    <h1 class="title">写真</h1>
+    <h2 class="subtitle">Picture</h2>
     <img src="image/top-picture1.jpg">
     <div class="category-wrapper">
-      <div class="discription">
+      <div class="description">
         <p>春日山の朝景色</p>
         <span class="subcomment">NikonD850 Nikkor24-70mm f2.8
         <br>2024.5.5</span>
         <div class="subdiscription">
           <p>自然・伝統的な景色を主に撮っています<br>目覚め・静かな情熱を<br>感じさせる一瞬が好きです</p>
           <p>使用機種<br>＊Nikon D850<br>＊Nikon D7000</p>
-        <a href="picturelib.html">
-          <!-- <img src="※もっと見るのボタンを作って入れる※" alt="もっとみる"> --></a>
+        <a href="picturelib.html"></a>
+        <button class="move">もっとみる➔</button>
         </div>
       </div>
     </div>
@@ -121,15 +126,15 @@
       <p class="subtitle">Illustration</p>
     <img src="image/comming soonイラスト.png">
     <div class="category-wrapper">
-      <div class="discription">
+      <div class="description">
         <p>にほんかもしか</p>
         <span class="subcomment">にほんかもしか
           <br>2024.5.5</span>
           <div class="subdiscription">
             <p>動物・キャラクター・想像画<br>デジタルイラスト中心で描いています</p>
             <p>使用ソフト<br>＊ibisPaintX<br>＊Photoshop/Illustrator<br>CLIP STUDIO PAINT</p>
-          <a href="illustlib.html">
-            <!-- <img src="※もっと見るのボタンを作って入れる※" alt="もっとみる"> --></a>
+          <a href="illustlib.html"></a>
+          <button class="move">もっとみる➔</button>
           </div>
       </div>
     </div>
@@ -145,7 +150,7 @@
       <p>ご依頼をもとに制作した作品です</p>
       <span>※掲載に関しては依頼元の許可をいただいております</span>
       <p>Webサイト制作は随時受け付けていますので<br>ご相談・ご依頼はお問い合わせフォームまでお願いいたします</p>
-      <div class="discription">
+      <div class="description">
         <h2>使用用語・環境</h2>
         <h3>OS:</h3>
         <p>Windows/Mac(iOS)</p><h3>Server:</h3><p>Lunix</p>
@@ -153,22 +158,22 @@
         <p>HTML・CSS・JavaScript・php・jQuery</p>
         <h3>その他環境:</h3>
         <p>GitHub・VScode・WordPress・Local flywheel・Docker・Figma・MySQL・Adobe Photoshop・Illustrator</p>
-        <a href="webloglib.html">
-          <!-- <img src="※もっと見るのボタンを作って入れる※" alt="もっとみる"> --></a>
+        <a href="webloglib.html"></a>
+        <button class="move">もっとみる➔</button>
       </div>
     </div>
   </section>
   <!--その他関連-->
   <section class="other-cor">
     <hr class="light-mainbar" />
-    <p class="title">その他関連</p>
-      <p class="subtitle">Other</p>
+    <h1 class="title">その他関連</h1>
+      <h2 class="subtitle">Other</h2>
     <img src="image/comming soonイラスト.png">
     <div class="category-wrapper">
-      <div class="discription">
+      <div class="description">
         <p></p>
-        <a href="library.php#blog">
-          <!-- <img src="※もっと見るのボタンを作って入れる※" alt="もっとみる"> --></a>
+        <a href="library.php#blog"></a>
+        <button class="move">もっとみる➔</button>
       </div>
     </div>
   </section>
@@ -179,7 +184,7 @@
     <p class="subtitle">Profile</p>
     <img src="image/myprofile2.jpg">
     <div class="category-wrapper">
-      <div class="discription">
+      <div class="description">
         <p>森 真由美 Mayumi Mori</p>
         <hr>
         <p>＊生まれ:1996年</p>
@@ -189,17 +194,21 @@
         <p>＊特記: 聴覚に障がいがあります</p>
         <hr>
       </div>
+        <div class="sns-area">
       <!-- SNSアイコン -->
       <a href="プロフィールリンク"><img src="※instagramアイコンを入れる※" alt="instagramのリンク"></a>
       <a href="プロフィールリンク"><img src="※Threadアイコンを入れる※" alt="Threadのリンク"></a>
-      <a href="profile.html">
-        <!-- <img src="※もっと見るのボタンを作って入れる※" alt="もっとみる"> --></a>
+      <a href="profile.html"></a>
+      <button class="move">詳細へ➔</button>
+        </div>
     </div>
   </section>
+ </div>
 <!--フッターはじめ-->
 <footer>
   <hr class="light-mainbar" />
-  <a href="index.html" class="footerlogo"><img src="image/KNOAGEOロゴ1.png" alt="トップページに戻る"></a>
+  <div class="footerzone">
+  <a href="#" class="footerlogo"><img src="image/KNOAGEOロゴ1.png" alt="トップページに戻る"></a>
   <div class="ft-contactarea">
     <p>e-mail: receptionmail@knoageo7.com</p>
     <p>対応時間: 6:00-19:00<br>（随時返信いたしますが、半日～1日お待ちいただく場合がございます）</p>
@@ -209,6 +218,7 @@
     <p>本サイト内の画像・作例などコンテンツの無断利用を固く禁じます</p>
     <p>コンテンツ利用申請はこちら</p>
 <span id="copyright">&copy;2025 KNOAGEO</span>
+  </div>
   </div>
 </footer>
 <!--フッターおわり-->
