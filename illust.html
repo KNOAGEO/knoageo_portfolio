@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>picture</title>
     <link rel="stylesheet" href="style/themestyle-sp.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
 <header>組み込みphp</header>
 <main>
-　<section>
+ <section>
     <h1 class="title">イラスト</h1>
                 <h2 class="subtitle">Illustration</h2>
                 <img src="image/illust1.jpg">
@@ -38,9 +41,13 @@
                 <hr class="light-mainbar" />
                 <section>
                 <h1 class="title">イラスト作例</h1>
-                <!-- カルーセル挿入 -->
+                <ul class="slider">
+                    <li><img src="image/comming soonイラスト.png" alt="img01"></li>
+                    <li><img src="image/comming soonイラスト.png" alt="img02"></li>
+                    <li><img src="image/comming soonイラスト.png" alt="img03"></li>
+                  </ul>
+                  <button class="move">もっとみる➔</button>
                 <div class="descarea">
-                    <img src="image/comming soonイラスト.png" alt="未実装です">
                     <span class="boldtitle">タイトル入力</span><br><br>
                     <p>※カルーセルに沿ってタイトルと撮影情報（簡易に）＋説明文に切替え、カルーセルに載せるものは最新順
                     </p>
@@ -49,5 +56,9 @@
  </section>
 </main>
 <footer>組み込みphp</footer>
+<!-- jQueryをCDNで導入するためのコード -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/top.js"></script>
 </body>
 </html>
