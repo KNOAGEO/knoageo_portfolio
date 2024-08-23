@@ -32,6 +32,11 @@ img {
   margin: 0;
 }
 
+.inlinewrap{
+  display: block;
+  margin-left: 4rem;
+}
+
   /*スマートフォン版*/
 
 /*横幅設定*/
@@ -55,6 +60,7 @@ header {
 
 .navarea{
   display: flex;
+  justify-content: space-between;
 }
 
 .logoarea {
@@ -77,12 +83,19 @@ header {
 
 /*ハンバーガーメニュー（スマホ版）*/
 .hamburger-menu{
-  width: 5rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 1.5rem;
+  width: 4.5rem;
   float: right;
   padding: 0;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.hamburger-menu img {
+  margin-left: 1rem;
 }
 
 nav{
@@ -93,7 +106,7 @@ nav{
 /*スマホ用ナビゲーションの表示切替*/
 /*初期状態、レイアウトと非表示設定*/
 #nav-sp {
-  background-color: #124047;
+  background-color: #2a3638;
   position: fixed;
   left: 0;
   top: 0;
@@ -101,6 +114,7 @@ nav{
   width: 100vw;
   display: none;
   z-index: 100;
+  overflow-y: auto;
   }
 
 /*xボタン*/
@@ -110,15 +124,22 @@ nav{
   display: block;
   align-items: flex;
   position: inherit;
-  top: 30px;
-  right: 20px;
+  top: 0.5rem;
+  right: 0.5rem;
 }
+
+/* awesomeの＞ボタン導入 (スマホ版のみ、ホバーを無くして＞でリンクに飛ぶようにする）
+arrow{
+  background-image: url("images/arrow.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}*/
 
 .search-box{
   display: flex;
   align-items: center;
   position: relative;
-  width: 25rem; /* 希望する幅に設定 */
+  width: 80%; /* 希望する幅に設定 */
   height: 50px; /* 希望する高さに設定 */
   padding: 10px; /* 内側の余白を設定 */
   margin-block: 5px;  /* 外側の余白を設定 */
@@ -126,35 +147,29 @@ nav{
   border: 1px solid #1a1f20; /* 境界線を設定（オプション） */
 }
 
+#search-query{
+  width: 85%;
+  left: 4rem;
+  top: 1rem;
+  padding: 10px;
+  padding-inline: 1rem;
+  background-color: #d0f9ffbb;
+}
+
 .search-icon {
   display: flex;
   width: 2.5rem;
   height: 2rem;
-  margin-right: 3rem;
-}
-
-#search-query{
-  flex-grow: 1;
-  width: 15rem;
-  left: 4rem;
-  top: 1rem;
-  padding: 10px;
-  background-color: #d0f9ffbb;
-}
-
-.search-bt {
-  width: 100%;
-  padding-inline: 30px;
-  box-sizing: border-box;
-  background-color:#319BB2;
-  color: #3EFFF3;
   margin-inline: 1rem;
-  border: 2px solid #1a1f20;
+  background-color: #1a1f2096;
+  border: #1a1f2096;
 }
 
-/*ナビゲーションメニュー用のロゴ*/
-#logo-sp {
-  margin: 80px 0 30px 20px;
+/*ナビゲーションメニュー*/
+.category {
+  font-size: 25px;
+  color: #3EFFF3;
+  margin: 4rem 0 0 0;
 }
 
 /*ナビゲーションのリンクの装飾設定*/
@@ -174,78 +189,137 @@ nav{
 #nav-sp > a:active {
   color: #ffffff;
 }
+
 #nav-sp >.menu {
   text-decoration: none;
   display: block;
-  margin: 0 20px 0 20px;
-  height: 44px;
-  font-size: 16px;
-  background-image: url("images/arrow.png");
-  background-repeat: no-repeat;
-  background-position: right top;
+  margin: 18px;
+  font-size: 18px;
 }
 
 
-  /*--------メイン(SP)----------*/
+/*--------メイン(SP)----------*/
   /* cover */
-  .cover > img{
+  .cover {
     width: 100%;
-    height: 80%;
+    height: 100%;
   }
 
   /* カテゴリ（セクション） */
   .sec{
     padding-inline: 1rem;
   }
-
+  /* バー */
   .light-mainbar {
     width: 100%;
     height: 0.3rem;
-    margin-left: 0;
+    margin: 0;
     display: inline-block;
     border: none;
     background: linear-gradient(to right, #004F59, #8Dfff8, #004F59);
     }
   
      /* カテゴリ共通 */
-  .title {
-    font-size: 40px;
+  .title-wrapper {
+    display: flex;
+    align-items: baseline;
+  }
 
+  .title {
+    width: 60%;
+    font-size: 1.7rem;
+    letter-spacing: 6px;
+    margin: 15 0px;
+  }
+
+  .title-1 {
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    padding-inline-start: 0.5rem;
+    margin: 0;
+  }
+          
+  .title-2 {
+    display: block;
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 10px;
+  }
+
+  .subtitle {
+    display: block;
+    color: #ffffff65;
+    font-size: 1.2rem;
+    padding-left: start;
+  }
+
+  .subtitle-1 {
+    display: block;
+    color: #ffffff65;
+    font-size: 20px;
+    margin-left: 20px;
   }
 
   .category-wrapper {
-    display: flex;
-    align-items: baseline;
-    padding-inline: 1rem;
+    display: block;
+    margin: 5px;
   }
   
   .category-wrapper .title {
-    font-size: 12px;
     font-weight: bold;
     margin: 0;
     display: inline-block;
     justify-content: space-between;
     align-items: center;
   }
-  
-  .description {
-    font-size: 18px;
+
+  .category-wrapper span {
+    font-size: 0.9rem;
   }
+
   
   /* 説明枠（白い枠線） */
   .descarea {
       border: 1px solid #ffffff;
       padding: 5px;
     }
+  
+    .description {
+      font-size: 16px;
+      padding: 0.5rem;
+    }
     
-  #subcomment {
+    .date {
+      font-size: 12px;
+      text-align: end;
+      padding-inline-end: 20px;
+      margin-bottom: 1rem;
+    }
+
+   .subcomment {
+    font-size: 13px;
     display: flex;
     text-align: right;
-  }
+    padding-inline-start: 1rem;
+   }
 
+   .desclist-left {
+    display: block;
+    text-align: left;
+    margin: 0;
+   }
+
+   .desclist-left p {
+    margin: 0 0 10px 0;
+    padding-left: 0.5rem;
+   }
+
+   /* もっとみる・詳細へなどに飛ぶ青いボタン */
   .move {
-    background-color: #319BB2; /* 背景色*/
-    color: #3EFFF3;            /* 文字色 */
+    background-color: #319BB2;
+    color: #3EFFF3;
+    letter-spacing: 3px;
     padding: 10px 20px;        /* ボタンの内側の余白 */
     border: none; /* ボーダー */
     border-radius: 5px;        /* ボタンの角を丸くする */
@@ -253,18 +327,22 @@ nav{
     font-weight: bold;           /* 文字のサイズ */
     cursor: pointer;           /* カーソルをポインタにする */
     transition: background-color 0.3s, color 0.3s; /* アニメーションの効果 */
+    margin: 0.5rem;
   }
   
-  #move:hover {
+  .move:hover {
     background-color: #8Dfff8; /* ホバー時の背景色 */
     color: #004F59;            /* ホバー時の文字色 */
   }
+
   /* カルーセル */
-  .sliderArea {
+  .slide {
     max-width: 100%;
     margin: 0 auto;
     padding: 0 25px;
+    z-index: 200;
   }
+
   .sliderArea.w300 {
     max-width: 300px;
   }
@@ -301,31 +379,69 @@ nav{
     opacity: .7;
   }
   
+/* SNSエリア */
+.snsarea {
+  display: flex;
+}
+
   /*フッター（SP）*/
-  .footerlogo {
+  .footerzone {
     display: flex;
-    width: 20rem;
     justify-content: center;
     align-items: center;
+    
+  }
+
+  .footerzone img {
+    width: 18rem;
+    margin: 50px;
   }
   
   .ft-contactarea {
-   padding-inline: 3rem;
+   padding-inline: 2.5rem;
    text-align: start;
   }
 
-  .ft-centerarea {
-   text-align: center;
+  .ft-contactarea p {
+    font-size: 0.8rem;
   }
+
+  .ft-contactarea span {
+    font-size: 0.6rem;
+    margin: 0;
+  }
+
+  .ft-centerarea {
+    display: block;
+   text-align: center;
+   margin: 6rem 0 0 0;
+  }
+
+  .ft-centerarea p {
+    font-size: 0.8rem;
+   }
+
+   .ft-centerarea span {
+    font-size: 0.7rem;
+   }
 
   footer > .light-mainbar {
     width: 100%;
   }
+
+  .copyright {
+    margin: 4rem 0 1rem 0;
+  }
   
-
+/* プルのときつかえるかも */
+ pull{
+  background-image: url("images/arrow.png");
+  background-repeat: no-repeat;
+  background-position: right top;
 }
-
+}
 /* PC版 */
     @media screen and (min-width: 768px) {
 
     }
+  
