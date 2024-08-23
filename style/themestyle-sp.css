@@ -32,7 +32,8 @@ img {
   margin: 0;
 }
 
-  /*スマートフォンスタイル*/
+  /*スマートフォン版*/
+
 /*横幅設定*/
 @media screen and (max-width: 767px) {
 body {
@@ -45,20 +46,26 @@ body {
 
 /*ヘッダー*/
 header {
+  display: block;
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: #1a1f20;
+}
+
+.navarea{
+  display: flex;
 }
 
 .logoarea {
   width: 100%;
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
   background-color: #1a1f20;
 }
 
-#toplogo {
-  width: 25rem;
+#logo {
+  width: 18rem;
   padding-inline: 1.5rem;
   margin: 1.5rem;
 }
@@ -70,34 +77,77 @@ header {
 
 /*ハンバーガーメニュー（スマホ版）*/
 .hamburger-menu{
-  width: 7rem;
-}
-
-#nav-sp {
+  width: 5rem;
   float: right;
   padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav{
+  padding-inline: 3rem;
+  text-align: left;
 }
 
 /*スマホ用ナビゲーションの表示切替*/
 /*初期状態、レイアウトと非表示設定*/
 #nav-sp {
-  background-color: #283031;
-  position: absolute;
+  background-color: #124047;
+  position: fixed;
   left: 0;
   top: 0;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   display: none;
   z-index: 100;
   }
 
 /*xボタン*/
 .close {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 20px;
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  align-items: flex;
+  position: inherit;
+  top: 30px;
   right: 20px;
+}
+.search-box{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 25rem; /* 希望する幅に設定 */
+  height: 50px; /* 希望する高さに設定 */
+  padding: 10px; /* 内側の余白を設定 */
+  margin-block: 5px;  /* 外側の余白を設定 */
+  background-color: #1a1f2096; /* 背景色を設定（オプション） */
+  border: 1px solid #1a1f20; /* 境界線を設定（オプション） */
+}
+
+.search-icon {
+  display: flex;
+  width: 2.5rem;
+  height: 2rem;
+  margin-right: 3rem;
+}
+
+#search-query{
+  flex-grow: 1;
+  width: 15rem;
+  left: 4rem;
+  top: 1rem;
+  padding: 10px;
+  background-color: #d0f9ffbb;
+}
+
+.search-bt {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color:#1a1f20;
+  color: #ffffff;
+  margin-inline: 2rem;
 }
 
 /*ナビゲーションメニュー用のロゴ*/
@@ -132,14 +182,7 @@ header {
   background-repeat: no-repeat;
   background-position: right top;
 }
-#sns {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-#sns > a {
-  margin-right: 30px;
-}
+
 
   /*--------メイン(SP)----------*/
   /* cover */
@@ -279,3 +322,8 @@ header {
   
 
 }
+
+/* PC版 */
+    @media screen and (min-width: 768px) {
+
+    }

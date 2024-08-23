@@ -18,20 +18,18 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-</head>
-
-<body>
- <div class="super_container">
+  </head>
+  <body>
 <!--ヘッダーここから-->
-  <header class="header">
-   <div class="logoarea">
-     <img src="image/KNOAGEOロゴ1.png" alt="トップページに戻る" />
+  <header>
+    <div class="navarea">
+   <a href="top.php" id="logo"><div class="logoarea"><img src="image/KNOAGEOロゴ1.png" alt="トップページに戻る" /></div></a>
+
  <!-- スマホ用メニューボタン -->
 <div class="hamburger-menu">
   <a href="#"><img src="image/白樺.png" alt="ナビゲーションメニューを開く" onclick="document.getElementById('nav-sp').style.display = 'block'" ></a>
 </div>
-
+    </div>
 <!-- PC用ナビ--><!--
 <nav id="nav-pc">
  <div class="search-box">
@@ -51,16 +49,20 @@
 <nav id="nav-sp">
   <h1 class="title">メニュー</h1>
   <hr class="light-mainbar" />
-  <img class="close" src="image/白樺×ボタン.png" alt="画面を閉じる" onclick="document.getElementById('nav-sp').style.display = 'none'">
+  <div class="close">
+  <img src="image/白樺×ボタン.png" alt="画面を閉じる" onclick="document.getElementById('nav-sp').style.display = 'none'">
+  </div>
   <div class="search-box">
+    <div class="search-icon">
     <img src="image/検索アイコン.png">
     <input type="text" id="search-query" placeholder="検索ワードを入力してください...">
-      <button onclick="performSearch()">検索</button>
+      <button class="search-bt" onclick="performSearch()">検索</button>
       </div>
       <!-- 結果表示エリア -->
       <div class="results" id="search-results">
         <!-- 検索結果がここに表示されます -->
       </div>
+    </div>
   <span>カテゴリー</span>
    <a class="menu" href="picture.php" onclick="document.getElementById('nav-sp').style.display = 'none'">写真</a>
    <a href="illust.php" onclick="document.getElementById('nav-sp').style.display = 'none'">イラスト</a>
@@ -81,7 +83,6 @@
    <span>お問い合わせ</span>
    <a href="contact.php" onclick="document.getElementById('nav-sp').style.display = 'none'">お問い合わせフォームへ</a>
  </nav>
-</div>
 <hr class="light-topbar" />
 </header>
 <!-- ヘッダーおわり -->
@@ -237,7 +238,6 @@
   </div>
   </div>
 </footer>
-</div>
 <!-- jQueryをCDNで導入するためのコード -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
