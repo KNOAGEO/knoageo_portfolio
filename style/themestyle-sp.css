@@ -135,7 +135,7 @@ arrow{
   background-position: right top;
 }*/
 
-.search-box{
+.search-box {
   display: flex;
   align-items: center;
   position: relative;
@@ -304,6 +304,13 @@ arrow{
       padding: 0.5rem;
       margin: 1rem 0;
       text-align: left;
+    }
+
+    .descarea-2 {
+      display: block;
+      border: 1px solid #ffffff;
+      padding: 1rem;
+      margin: 1rem 0;
     }
   
     .description {
@@ -489,7 +496,26 @@ arrow{
   .copyright {
     margin: 4rem 0 1rem 0;
   }
-  
+
+  .list{
+    display: flex;
+    padding-inline-start: 1rem;
+    text-align: start;
+  }
+
+  .list .description {
+    font-size: 1.2rem;
+  }
+
+  .fill-box {
+  display: flex;
+  width: 80%; /* 希望する幅に設定 */
+  height: 50px; /* 希望する高さに設定 */
+  padding: 0.5rem; /* 内側の余白を設定 */
+  margin-block: 5px;  /* 外側の余白を設定 */
+  background-color: #1a1f2096; /* 背景色を設定（オプション） */
+  border: 1px solid #ffffff; /* 境界線を設定（オプション） */
+  }
 /* プルのときつかえるかも */
  pull{
   background-image: url("images/arrow.png");
