@@ -37,6 +37,16 @@ img {
   margin-left: 4rem;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ffffff80;
+}
+
+.important-line {
+  text-decoration: underline;
+ }
+
   /*スマートフォン版*/
 
 /*横幅設定*/
@@ -56,6 +66,7 @@ header {
   top: 0;
   width: 100%;
   background-color: #1a1f20;
+  z-index: 200;
 }
 
 .navarea{
@@ -139,7 +150,7 @@ arrow{
   display: flex;
   align-items: center;
   position: relative;
-  width: 80%; /* 希望する幅に設定 */
+  width: 100%; /* 希望する幅に設定 */
   height: 50px; /* 希望する高さに設定 */
   padding: 10px; /* 内側の余白を設定 */
   margin-block: 5px;  /* 外側の余白を設定 */
@@ -202,7 +213,7 @@ arrow{
   /* cover */
   .cover {
     width: 100%;
-    height: 100%;
+    padding-top: 5.5rem;
   }
 
   /* カテゴリ（セクション） */
@@ -222,7 +233,7 @@ arrow{
      /* カテゴリ共通 */
   .title-wrapper {
     display: flex;
-    align-items: baseline;
+    align-items: center;
   }
 
   .title-wrapper-1 {
@@ -235,15 +246,15 @@ arrow{
     width: 60%;
     font-size: 1.7rem;
     letter-spacing: 6px;
-    margin: 15 0px;
+    padding: 1.2rem;
   }
 
   .title-1 {
     display: block;
     font-size: 1.5rem;
     letter-spacing: 5px;
-    padding-inline-start: 0.5rem;
-    margin: 0;
+    padding-inline-start: 2rem;
+    margin: 0.5rem 2rem 0 0;
   }
           
   .title-2 {
@@ -312,7 +323,9 @@ arrow{
       padding: 1rem;
       margin: 1rem 0;
     }
-  
+
+
+  /* 説明（desc) */
     .description {
       font-size: 1rem;
       padding: 0.5rem;
@@ -328,6 +341,14 @@ arrow{
       font-size: 16px;
       color: #319BB2;
       padding: 0.5rem;
+    }
+
+    .description-center { /*説明文中央寄せ  */
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 0.8rem;
     }
     
     .date {
@@ -358,7 +379,7 @@ arrow{
    .boldtitle {
     font-size: 1rem;
     font-weight: bold;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.4rem;
    }
 
    .descarea > img {
@@ -444,9 +465,28 @@ arrow{
   }
   
 /* SNSエリア */
-.snsarea {
+
+.linkarea {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.sns-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sns-icon-insta {
+width: 3rem;
+margin: 0.6rem 1rem;
+}
+
+.sns-icon-threads {
+  width: 4.2rem;
+}
+
+
 
   /*フッター（SP）*/
   .footerzone {
@@ -483,6 +523,7 @@ arrow{
 
   .ft-centerarea p {
     font-size: 0.8rem;
+    text-decoration: underline;
    }
 
    .ft-centerarea span {
@@ -497,26 +538,56 @@ arrow{
     margin: 4rem 0 1rem 0;
   }
 
-  .list{
-    display: flex;
-    padding-inline-start: 1rem;
-    text-align: start;
+  /* お問い合わせフォーム */
+  .form-title {
+    width: 32%;
+    font-size: 1rem;
+    text-align: right;
   }
 
-  .list .description {
-    font-size: 1.2rem;
-  }
-
-  .fill-box {
+.fill-box {
   display: flex;
-  width: 80%; /* 希望する幅に設定 */
-  height: 50px; /* 希望する高さに設定 */
-  padding: 0.5rem; /* 内側の余白を設定 */
-  margin-block: 5px;  /* 外側の余白を設定 */
+  flex-grow: 1;
+  height: 2rem; /* 希望する高さに設定 */
+  margin: 1rem;
   background-color: #1a1f2096; /* 背景色を設定（オプション） */
   border: 1px solid #ffffff; /* 境界線を設定（オプション） */
   }
-/* プルのときつかえるかも */
+
+  .fill-box input,
+  .fill-box select,
+  .textbox {
+    width: 100%;
+    background-color: #2a3638;
+    color: #ffffff;
+  }
+
+ .form-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+.textbox {
+  height: 13rem;
+  margin-top: 0.8rem;
+}
+
+.address-way {
+  display: flex;
+  border: 1px solid;
+  padding: 0.3rem 0;
+  width: 100%;
+}
+
+.personal-info {
+  font-size: 0.8rem;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+/* selectのときつかえるかも */
  pull{
   background-image: url("images/arrow.png");
   background-repeat: no-repeat;
