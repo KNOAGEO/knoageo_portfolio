@@ -1,91 +1,104 @@
 /*全端末共通スタイル*/
-html{
-  background-color: #1a1f20;
-  font-family: "Lexend Exa", "Zen kaku Gothic Antique", Meiryo, Arial, sans-serif;
-  color: white;
-  text-align: center;
-}
+  html{
+    background-color: #1a1f20;
+    font-family: "Lexend Exa", "Zen kaku Gothic Antique", Meiryo, Arial, sans-serif;
+    color: white;
+    text-align: center;
+  }
 
 /*フォント*/
-.lexend-exa {
-  font-family: "Lexend Exa", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-}
+  .lexend-exa {
+    font-family: "Lexend Exa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
 
-.zen-kaku-gothic-antique-regular {
-  font-family: "Zen Kaku Gothic Antique", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-img {
-  width: 100%;
-}
-
-.light-topbar {
-  width: 100%;
-  height: 0.5rem;
-  border: none;
-  background: linear-gradient(to right, #004F59, #00E5D8, #004F59);
-  margin: 0;
-}
+  .zen-kaku-gothic-antique-regular {
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+/* 画像の初期設定 */
+  img {
+    width: 100%;
+  }
+/* 光沢仕切りバー */
+  .light-topbar {
+    width: 100%;
+    height: 0.5rem;
+    border: none;
+    background: linear-gradient(to right, #004F59, #00E5D8, #004F59);
+    margin: 0;
+  }
 
 .inlinewrap{
   display: block;
   margin-left: 4rem;
 }
 
-hr {
-  border: 0;
-  height: 1px;
-  background-color: #ffffff80;
-}
+/* 水平線バー */
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #ffffff80;
+  }
 
-.important-line {
-  text-decoration: underline;
+/* リンクへ飛ぶ・大事な部分の白線 */
+  .important-line {
+    text-decoration: underline;
+  }
+
+/* フォーム */
+#form {
+  margin-top: 0.5rem;
  }
 
-  /*スマートフォン版*/
-
-/*横幅設定*/
-@media screen and (max-width: 767px) {
-body {
-  min-width: 375px;
-  margin: 0;
-  background-color: #1a1f20;
-  color: white;
-  margin: 0 auto;
+main {
+  margin-top: 3rem;
 }
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+スマートフォン版
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+/*横幅設定※レスポンシブSP版*/
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 375px;
+    margin: 0;
+    background-color: #1a1f20;
+    color: white;
+    margin: 0 auto;
+  }
 
 /*ヘッダー*/
-header {
-  display: block;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #1a1f20;
-  z-index: 200;
-}
+    header {
+      display: block;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1a1f20;
+      z-index: 200;
+    }
 
-.navarea{
-  display: flex;
-  justify-content: space-between;
-}
+  .navarea{
+    display: flex;
+    justify-content: space-between;
+  }
 
-.logoarea {
-  width: 100%;
-  display: inline-block;
-  justify-content: space-between;
-  background-color: #1a1f20;
-}
+  .logoarea {
+    width: 100%;
+    display: inline-block;
+    justify-content: space-between;
+    background-color: #1a1f20;
+  }
 
-#logo {
-  width: 18rem;
-  padding-inline: 1.5rem;
-  margin: 1.5rem;
-}
+  #logo {
+    width: 18rem;
+    padding-inline: 1.5rem;
+    margin: 1.5rem;
+  }
 
 /*PC用ナビゲーション非表示*/
 #nav-pc {
@@ -146,16 +159,9 @@ arrow{
   background-position: right top;
 }*/
 
-.search-box {
+.searcharea {
   display: flex;
   align-items: center;
-  position: relative;
-  width: 100%; /* 希望する幅に設定 */
-  height: 50px; /* 希望する高さに設定 */
-  padding: 10px; /* 内側の余白を設定 */
-  margin-block: 5px;  /* 外側の余白を設定 */
-  background-color: #1a1f2096; /* 背景色を設定（オプション） */
-  border: 1px solid #1a1f20; /* 境界線を設定（オプション） */
 }
 
 #search-query{
@@ -165,6 +171,7 @@ arrow{
   padding: 10px;
   padding-inline: 1rem;
   background-color: #d0f9ffbb;
+  color: #1a1f20;
 }
 
 .search-icon {
@@ -175,6 +182,23 @@ arrow{
   background-color: #1a1f2096;
   border: #1a1f2096;
 }
+
+/* 検索結果エリア */
+ .searcharea {
+  background-color: #2a3638;
+  color: #ffffff;
+ }
+
+ /*xボタン*/
+  .close-1 {
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    align-items: flex;
+    position: inherit;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
 
 /*ナビゲーションメニュー*/
 .category {
@@ -209,11 +233,10 @@ arrow{
 }
 
 
-/*--------メイン(SP)----------*/
+/*--------メインコンテンツ(SP)----------*/
   /* cover */
   .cover {
     width: 100%;
-    padding-top: 5.5rem;
   }
 
   /* カテゴリ（セクション） */
@@ -233,7 +256,7 @@ arrow{
      /* カテゴリ共通 */
   .title-wrapper {
     display: flex;
-    align-items: center;
+    align-items: baseline;
   }
 
   .title-wrapper-1 {
@@ -242,19 +265,26 @@ arrow{
     margin: 0;
   }
 
+/* お問い合わせフォームタイトル */
+  .title-wrapper-2 {
+    display: flex;
+  }
+
+/* カテゴリ名 */
   .title {
     width: 60%;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     letter-spacing: 6px;
     padding: 1.2rem;
   }
 
+/* 自己紹介-名前 */
   .title-1 {
     display: block;
     font-size: 1.5rem;
     letter-spacing: 5px;
     padding-inline-start: 2rem;
-    margin: 0.5rem 2rem 0 0;
+    margin: 0.5rem 0.8rem 0 0;
   }
           
   .title-2 {
@@ -277,12 +307,11 @@ arrow{
     font-size: 1.2rem;
     padding-left: start;
   }
-
+/* 自己紹介の不透明英語表記 */
   .subtitle-1 {
     display: block;
     color: #ffffff65;
     font-size: 20px;
-    margin-left: 20px;
   }
 
   .category-wrapper {
@@ -470,6 +499,7 @@ arrow{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 0.5rem;
 }
 
 .sns-area {
