@@ -6,7 +6,6 @@
   <div class="ft-contactarea">
     <p>e-mail: receptionmail@knoageo7.com</p><br>
     <p>対応時間: 6:00-19:00<br><span>随時返信いたしますが、半日～1日お待ちいただく場合がございます</span></p>
-    
   </div>
   <div class="ft-centerarea">
     <a href="<?php echo home_url(); ?>/contact"><p>お問い合わせ・ご依頼や相談はこちら</p></a><br>
@@ -18,8 +17,7 @@
 <!-- jQueryをCDNで導入するためのコード -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="<?php echo home_url(); ?>/js/top.js"></script>
-
+<script src="<?php echo get_template_directory_uri(); ?>/js/top.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

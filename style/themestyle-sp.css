@@ -19,10 +19,16 @@
     font-weight: 400;
     font-style: normal;
   }
+
+  p {
+    font-size: 1rem;
+  }
+  
 /* 画像の初期設定 */
   img {
     width: 100%;
   }
+
 /* 光沢仕切りバー */
   .light-topbar {
     width: 100%;
@@ -31,6 +37,16 @@
     background: linear-gradient(to right, #004F59, #00E5D8, #004F59);
     margin: 0;
   }
+
+  /* バー */
+  .light-mainbar {
+    width: 100%;
+    height: 0.3rem;
+    margin: 0;
+    display: inline-block;
+    border: none;
+    background: linear-gradient(to right, #004F59, #8Dfff8, #004F59);
+    }
 
 .inlinewrap{
   display: block;
@@ -44,392 +60,7 @@
     background-color: #ffffff80;
   }
 
-/* リンクへ飛ぶ・大事な部分の白線 */
-  .important-line {
-    text-decoration: underline;
-  }
-
-/* フォーム */
-#form {
-  margin-top: 0.5rem;
- }
-
-main {
-  margin-top: 3rem;
-}
-
-/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-スマートフォン版
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
-
-/*横幅設定※レスポンシブSP版*/
-@media screen and (max-width: 767px) {
-  body {
-    min-width: 375px;
-    margin: 0;
-    background-color: #1a1f20;
-    color: white;
-    margin: 0 auto;
-  }
-
-/*ヘッダー*/
-    header {
-      display: block;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #1a1f20;
-      z-index: 200;
-    }
-
-  .navarea{
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .logoarea {
-    width: 100%;
-    display: inline-block;
-    justify-content: space-between;
-    background-color: #1a1f20;
-  }
-
-  #logo {
-    width: 18rem;
-    padding-inline: 1.5rem;
-    margin: 1.5rem;
-  }
-
-/*PC用ナビゲーション非表示*/
-#nav-pc {
-  display: none;
-}
-
-/*ハンバーガーメニュー（スマホ版）*/
-.hamburger-menu{
-  position: absolute;
-  right: 1rem;
-  bottom: 1.5rem;
-  width: 4.5rem;
-  float: right;
-  padding: 0;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hamburger-menu img {
-  margin-left: 1rem;
-}
-
-nav{
-  padding-inline: 3rem;
-  text-align: left;
-}
-
-/*スマホ用ナビゲーションの表示切替*/
-/*初期状態、レイアウトと非表示設定*/
-#nav-sp {
-  background-color: #2a3638;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  display: none;
-  z-index: 100;
-  overflow-y: auto;
-  }
-
-/*xボタン*/
-.close {
-  width: 4rem;
-  height: 4rem;
-  display: block;
-  align-items: flex;
-  position: inherit;
-  top: 0.5rem;
-  right: 0.5rem;
-}
-
-/* awesomeの＞ボタン導入 (スマホ版のみ、ホバーを無くして＞でリンクに飛ぶようにする）
-arrow{
-  background-image: url("images/arrow.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-}*/
-
-.searcharea {
-  display: flex;
-  align-items: center;
-}
-
-#search-query{
-  width: 85%;
-  left: 4rem;
-  top: 1rem;
-  padding: 10px;
-  padding-inline: 1rem;
-  background-color: #d0f9ffbb;
-  color: #1a1f20;
-}
-
-.search-icon {
-  display: flex;
-  width: 2.5rem;
-  height: 2rem;
-  margin-inline: 1rem;
-  background-color: #1a1f2096;
-  border: #1a1f2096;
-}
-
-/* 検索結果エリア */
- .searcharea {
-  background-color: #2a3638;
-  color: #ffffff;
- }
-
- /*xボタン*/
-  .close-1 {
-    width: 4rem;
-    height: 4rem;
-    display: block;
-    align-items: flex;
-    position: inherit;
-    top: 0.5rem;
-    right: 0.5rem;
-  }
-
-/*ナビゲーションメニュー*/
-.category {
-  font-size: 25px;
-  color: #3EFFF3;
-  margin: 4rem 0 0 0;
-}
-
-/*ナビゲーションのリンクの装飾設定*/
-#nav-sp > a {
-  display: block;
-}
-#nav-sp > a:link {
-  color: #ffffff;
-}
-#nav-sp > a:visited {
-  color: #ffffff;
-}
-#nav-sp > a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-#nav-sp > a:active {
-  color: #ffffff;
-}
-
-#nav-sp >.menu {
-  text-decoration: none;
-  display: block;
-  margin: 18px;
-  font-size: 18px;
-}
-
-
-/*--------メインコンテンツ(SP)----------*/
-  /* cover */
-  .cover {
-    width: 100%;
-  }
-
-  /* カテゴリ（セクション） */
-  .sec{
-    padding-inline: 1rem;
-  }
-  /* バー */
-  .light-mainbar {
-    width: 100%;
-    height: 0.3rem;
-    margin: 0;
-    display: inline-block;
-    border: none;
-    background: linear-gradient(to right, #004F59, #8Dfff8, #004F59);
-    }
-  
-     /* カテゴリ共通 */
-  .title-wrapper {
-    display: flex;
-    align-items: baseline;
-  }
-
-  .title-wrapper-1 {
-    display: flex;
-    align-items: baseline;
-    margin: 0;
-  }
-
-/* お問い合わせフォームタイトル */
-  .title-wrapper-2 {
-    display: flex;
-  }
-
-/* カテゴリ名 */
-  .title {
-    width: 60%;
-    font-size: 1.4rem;
-    letter-spacing: 6px;
-    padding: 1.2rem;
-  }
-
-/* 自己紹介-名前 */
-  .title-1 {
-    display: block;
-    font-size: 1.5rem;
-    letter-spacing: 5px;
-    padding-inline-start: 2rem;
-    margin: 0.5rem 0.8rem 0 0;
-  }
-          
-  .title-2 {
-    display: block;
-    text-align: left;
-    font-size: 1.2rem;
-    margin: 10px;
-  }
-
-  .title-3 {
-    display: block;
-    font-size: 1.7rem;
-    letter-spacing: 10px;
-    margin: 1rem 0;
-  }
-
-  .subtitle {
-    display: block;
-    color: #ffffff65;
-    font-size: 1.2rem;
-    padding-left: start;
-  }
-/* 自己紹介の不透明英語表記 */
-  .subtitle-1 {
-    display: block;
-    color: #ffffff65;
-    font-size: 20px;
-  }
-
-  .category-wrapper {
-    display: block;
-    margin: 5px;
-  }
-  
-  .category-wrapper .title {
-    font-weight: bold;
-    margin: 0;
-    display: inline-block;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .category-wrapper span {
-    font-size: 0.9rem;
-  }
-
-  
-  /* 説明枠（白い枠線） */
-  .descarea {
-      border: 1px solid #ffffff;
-      padding: 1rem;
-      margin: 1rem 0;
-    }
-
-    .descarea-1 {
-      border: 1px solid #ffffff;
-      padding: 0.5rem;
-      margin: 1rem 0;
-      text-align: left;
-    }
-
-    .descarea-2 {
-      display: block;
-      border: 1px solid #ffffff;
-      padding: 1rem;
-      margin: 1rem 0;
-    }
-
-
-  /* 説明（desc) */
-    .description {
-      font-size: 1rem;
-      padding: 0.5rem;
-    }
-
-    .description-1 {
-      font-size: 1.3rem;
-      padding: 0.5rem;
-      margin: 0;
-    }
-
-    .description-2 {
-      font-size: 16px;
-      color: #319BB2;
-      padding: 0.5rem;
-    }
-
-    .description-center { /*説明文中央寄せ  */
-      display: block;
-      width: 90%;
-      margin: 0 auto;
-      text-align: left;
-      font-size: 0.8rem;
-    }
-    
-    .date {
-      font-size: 12px;
-      text-align: end;
-      padding-inline-end: 20px;
-      margin-bottom: 1rem;
-    }
-
-   .subcomment {
-    font-size: 13px;
-    display: flex;
-    text-align: right;
-    padding-inline-start: 1rem;
-   }
-
-   .desclist-left {
-    display: block;
-    text-align: left;
-    margin: 0;
-   }
-
-   .desclist-left p {
-    margin: 0 0 10px 0;
-    padding-left: 0.5rem;
-   }
-
-   .boldtitle {
-    font-size: 1rem;
-    font-weight: bold;
-    letter-spacing: 0.4rem;
-   }
-
-   .descarea > img {
-    width: 10rem;
-    margin: 1rem 0;
-   }
-
-   .setsec {
-    display: flex;
-   }
-
-   .setsec > .descarea {
-    width: 50%;
-   }
-
-   .block {
-    display: block;
-    padding: 1rem;
-   }
-
-   /* もっとみる・詳細へなどに飛ぶ青いボタン */
+  /* もっとみる・詳細へなどに飛ぶ青いボタン */
   .move {
     background-color: #319BB2;
     color: #3EFFF3;
@@ -462,10 +93,11 @@ arrow{
   }
   .slick-slide {
     margin: 0 5px;
+    height: auto !important;
   }
   .slick-slide img {
     width: 100%;
-    height: auto;
+    height: auto; 
   }
   .slick-prev, .slick-next {
     z-index: 1;
@@ -492,140 +124,591 @@ arrow{
   .thumb .slick-slide:hover {
     opacity: .7;
   }
-  
-/* SNSエリア */
 
-.linkarea {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 0.5rem;
+/* リンクへ飛ぶ・大事な部分の白線 */
+  .important-line {
+    text-decoration: underline;
+  }
+
+/* フォーム */
+#form {
+  margin-top: 0.5rem;
+ }
+
+main {
+  margin-top: 3rem;
 }
 
-.sns-area {
-  display: flex;
-  justify-content: space-between;
-}
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+スマートフォン版
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
 
-.sns-icon-insta {
-width: 3rem;
-margin: 0.6rem 1rem;
-}
+/*横幅設定※レスポンシブSP版*/
+@media screen and (max-width: 767px) {
+    body {
+      min-width: 375px;
+      margin: 0;
+      background-color: #1a1f20;
+      color: white;
+      margin: 0 auto;
+    }
 
-.sns-icon-threads {
-  width: 4.2rem;
-}
+  /*ヘッダー*/
+      header {
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #1a1f20;
+        z-index: 200;
+      }
 
+    .navarea{
+      display: flex;
+      justify-content: space-between;
+    }
 
+    .logoarea {
+      width: 100%;
+      display: inline-block;
+      justify-content: space-between;
+      background-color: #1a1f20;
+    }
 
-  /*フッター（SP）*/
-  .footerzone {
-    display: flex;
+    #logo {
+      width: 18rem;
+      padding-inline: 1.5rem;
+      margin: 1.5rem;
+    }
+
+  /*PC用ナビゲーション非表示*/
+  #nav-pc {
+    display: none;
+  }
+
+  /*ハンバーガーメニュー（スマホ版）*/
+  .hamburger-menu{
+    position: absolute;
+    right: 1rem;
+    bottom: 1.5rem;
+    width: 4.5rem;
+    float: right;
+    padding: 0;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    
   }
 
-  .footerzone img {
-    width: 18rem;
-    margin: 50px;
-  }
-  
-  .ft-contactarea {
-   padding-inline: 2.5rem;
-   text-align: start;
+  .hamburger-menu img {
+    margin-left: 1rem;
   }
 
-  .ft-contactarea p {
-    font-size: 0.8rem;
+  nav{
+    padding-inline: 3rem;
+    text-align: left;
   }
 
-  .ft-contactarea span {
-    font-size: 0.6rem;
-    margin: 0;
-  }
+  /*スマホ用ナビゲーションの表示切替*/
+  /*初期状態、レイアウトと非表示設定*/
+  #nav-sp {
+    background-color: #2a3638;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    z-index: 100;
+    overflow-y: auto;
+    }
 
-  .ft-centerarea {
+  /*xボタン*/
+  .close {
+    width: 4rem;
+    height: 4rem;
     display: block;
-   text-align: center;
-   margin: 6rem 0 0 0;
+    align-items: flex;
+    position: inherit;
+    top: 0.5rem;
+    right: 0.5rem;
   }
 
-  .ft-centerarea p {
-    font-size: 0.8rem;
-    text-decoration: underline;
-   }
+  /* awesomeの＞ボタン導入 (スマホ版のみ、ホバーを無くして＞でリンクに飛ぶようにする）
+  arrow{
+    background-image: url("images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }*/
 
-   .ft-centerarea span {
-    font-size: 0.7rem;
-   }
-
-  footer > .light-mainbar {
-    width: 100%;
+  .searcharea {
+    display: flex;
+    align-items: center;
   }
 
-  .copyright {
-    margin: 4rem 0 1rem 0;
+  #search-query{
+    width: 85%;
+    left: 4rem;
+    top: 1rem;
+    padding: 10px;
+    padding-inline: 1rem;
+    background-color: #d0f9ffbb;
+    color: #1a1f20;
   }
 
-  /* お問い合わせフォーム */
-  .form-title {
-    width: 32%;
-    font-size: 1rem;
-    text-align: right;
+  .search-icon {
+    display: flex;
+    width: 2.5rem;
+    height: 2rem;
+    margin-inline: 1rem;
+    background-color: #1a1f2096;
+    border: #1a1f2096;
   }
 
-.fill-box {
-  display: flex;
-  flex-grow: 1;
-  height: 2rem; /* 希望する高さに設定 */
-  margin: 1rem;
-  background-color: #1a1f2096; /* 背景色を設定（オプション） */
-  border: 1px solid #ffffff; /* 境界線を設定（オプション） */
-  }
-
-  .fill-box input,
-  .fill-box select,
-  .textbox {
-    width: 100%;
+  /* 検索結果エリア */
+  .searcharea {
     background-color: #2a3638;
     color: #ffffff;
   }
 
- .form-box {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+  /*xボタン*/
+    .close-1 {
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      align-items: flex;
+      position: inherit;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+
+  /*ナビゲーションメニュー*/
+  .category {
+    font-size: 25px;
+    color: #3EFFF3;
+    margin: 4rem 0 0 0;
   }
 
-.textbox {
-  height: 13rem;
-  margin-top: 0.8rem;
+  /*ナビゲーションのリンクの装飾設定*/
+    #nav-sp > a {
+      display: block;
+    }
+    #nav-sp > a:link {
+      color: #ffffff;
+    }
+    #nav-sp > a:visited {
+      color: #ffffff;
+    }
+    #nav-sp > a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    #nav-sp > a:active {
+      color: #ffffff;
+    }
+
+    #nav-sp >.menu {
+      text-decoration: none;
+      display: block;
+      margin: 18px;
+      font-size: 18px;
+    }
+
+
+  /*--------メインコンテンツ(SP)----------*/
+    /* cover */
+    .cover {
+      width: 100%;
+    }
+
+    /* カテゴリ（セクション） */
+    .sec{
+      padding-inline: 1rem;
+    }
+    
+    
+      /* カテゴリ共通 */
+    .title-wrapper {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .title-wrapper-1 {
+      display: flex;
+      align-items: baseline;
+      margin: 0;
+    }
+
+  /* お問い合わせフォームタイトル */
+    .title-wrapper-2 {
+      display: flex;
+    }
+
+  /* カテゴリ名 */
+    .title {
+      width: 60%;
+      font-size: 1.4rem;
+      letter-spacing: 6px;
+      padding: 1.2rem;
+    }
+
+  /* 自己紹介-名前 */
+    .title-1 {
+      display: block;
+      font-size: 1.5rem;
+      letter-spacing: 5px;
+      padding-inline-start: 2rem;
+      margin: 0.5rem 0.8rem 0 0;
+    }
+            
+    .title-2 {
+      display: block;
+      text-align: left;
+      font-size: 1.2rem;
+      margin: 10px;
+    }
+
+    .title-3 {
+      display: block;
+      font-size: 1.7rem;
+      letter-spacing: 10px;
+      margin: 1rem 0;
+    }
+
+    .subtitle {
+      display: block;
+      color: #ffffff65;
+      font-size: 1.2rem;
+      padding-left: start;
+    }
+  /* 自己紹介の不透明英語表記 */
+    .subtitle-1 {
+      display: block;
+      color: #ffffff65;
+      font-size: 20px;
+    }
+
+    .category-wrapper {
+      display: block;
+      margin: 5px;
+    }
+    
+    .category-wrapper .title {
+      font-weight: bold;
+      margin: 0;
+      display: inline-block;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .category-wrapper span {
+      font-size: 0.9rem;
+    }
+
+    
+    /* 説明枠（白い枠線） */
+    .descarea {
+        border: 1px solid #ffffff;
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+
+      .descarea-1 {
+        border: 1px solid #ffffff;
+        padding: 0.5rem;
+        margin: 1rem 0;
+        text-align: left;
+      }
+
+      .descarea-2 {
+        display: block;
+        border: 1px solid #ffffff;
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+
+
+    /* 説明（desc) */
+      .description {
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+
+      .description-1 {
+        font-size: 1.3rem;
+        padding: 0.5rem;
+        margin: 0;
+      }
+
+      .description-2 {
+        font-size: 16px;
+        color: #319BB2;
+        padding: 0.5rem;
+      }
+
+      .description-center { /*説明文中央寄せ  */
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        text-align: left;
+        font-size: 0.8rem;
+      }
+      
+      .date {
+        font-size: 12px;
+        text-align: end;
+        padding-inline-end: 20px;
+        margin-bottom: 1rem;
+      }
+
+    .subcomment {
+      font-size: 13px;
+      display: flex;
+      text-align: right;
+      padding-inline-start: 1rem;
+    }
+
+    .desclist-left {
+      display: block;
+      text-align: left;
+      margin: 0;
+    }
+
+    .desclist-left p {
+      margin: 0 0 10px 0;
+      padding-left: 0.5rem;
+    }
+
+    .boldtitle {
+      font-size: 1rem;
+      font-weight: bold;
+      letter-spacing: 0.4rem;
+    }
+
+    .descarea > img {
+      width: 10rem;
+      margin: 1rem 0;
+    }
+
+    .setsec {
+      display: flex;
+    }
+
+    .setsec > .descarea {
+      width: 50%;
+    }
+
+    .block {
+      display: block;
+      padding: 1rem;
+    }
+   
+  /* SNSエリア */
+  .linkarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+  }
+
+  .sns-area {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sns-icon-insta {
+  width: 3rem;
+  margin: 0.6rem 1rem;
+  }
+
+  .sns-icon-threads {
+    width: 4.2rem;
+  }
+
+    /*フッター（SP）*/
+    .footerzone {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .footerzone img {
+      width: 18rem;
+      margin: 50px;
+    }
+    
+    .ft-contactarea {
+    padding-inline: 2.5rem;
+    text-align: center;
+    }
+
+    .ft-contactarea p {
+      font-size: 1rem;
+    }
+
+    .ft-contactarea span {
+      font-size: 0.8rem;
+      margin: 0;
+    }
+
+    .ft-centerarea {
+      display: block;
+    text-align: center;
+    margin: 6rem 0 0 0;
+    }
+
+    .ft-centerarea p {
+      font-size: 0.8rem;
+      text-decoration: underline;
+    }
+
+    .ft-centerarea span {
+      font-size: 0.7rem;
+    }
+
+    footer > .light-mainbar {
+      width: 100%;
+    }
+
+    .copyright {
+      margin: 4rem 0 1rem 0;
+    }
+
+    /* お問い合わせフォーム */
+    .form-title {
+      width: 32%;
+      font-size: 1rem;
+      text-align: right;
+    }
+
+  .fill-box {
+    display: flex;
+    flex-grow: 1;
+    height: 2rem; /* 希望する高さに設定 */
+    margin: 1rem;
+    background-color: #1a1f2096; /* 背景色を設定（オプション） */
+    border: 1px solid #ffffff; /* 境界線を設定（オプション） */
+    }
+
+    .fill-box input,
+    .fill-box select,
+    .textbox {
+      width: 100%;
+      background-color: #2a3638;
+      color: #ffffff;
+    }
+
+  .form-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+  .textbox {
+    height: 13rem;
+    margin-top: 0.8rem;
+  }
+
+  .address-way {
+    display: flex;
+    border: 1px solid;
+    padding: 0.3rem 0;
+    width: 100%;
+  }
+
+  .personal-info {
+    font-size: 0.8rem;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+
+}
+/* ＝＝＝＝＝＝＝＝＝＝
+　　　　PC版 　　　　
+＝＝＝＝＝＝＝＝＝＝＝*/
+@media screen and (min-width: 768px) {
+/* 横幅設定 */
+  body {
+    max-width: 1280px;
+    min-width: 960px;
+    margin: 0 auto 0 auto;
+  }
+
+/* ヘッダー(PC) */
+   header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+ .navarea {
+  display: flex;
+  justify-content: baseline;
+ }
+
+
+
+/*フッター（PC）*/
+.footerzone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
-.address-way {
-  display: flex;
-  border: 1px solid;
-  padding: 0.3rem 0;
+.footerzone img {
+  width: 18rem;
+  margin: 50px;
+}
+
+.ft-contactarea {
+padding-inline: 2.5rem;
+text-align: start;
+}
+
+.ft-contactarea p {
+  font-size: 0.8rem;
+}
+
+.ft-contactarea span {
+  font-size: 0.6rem;
+  margin: 0;
+}
+
+.ft-centerarea {
+  display: block;
+text-align: center;
+margin: 6rem 0 0 0;
+}
+
+.ft-centerarea p {
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+.ft-centerarea span {
+  font-size: 0.7rem;
+}
+
+footer > .light-mainbar {
   width: 100%;
 }
 
-.personal-info {
-  font-size: 0.8rem;
-  text-align: left;
-  max-height: 200px;
-  overflow-y: scroll;
+.copyright {
+  margin: 4rem 0 1rem 0;
 }
 
-/* selectのときつかえるかも */
- pull{
-  background-image: url("images/arrow.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-}
-}
-/* PC版 */
-    @media screen and (min-width: 768px) {
 
-    }
-  
+
+
+
+
+
+
+
+
+
+
+
+
+}
