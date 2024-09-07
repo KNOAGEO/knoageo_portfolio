@@ -1,4 +1,5 @@
-/*全端末共通スタイル*/
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝全端末共通スタイル＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
   html{
     background-color: #1a1f20;
     font-family: "Lexend Exa", "Zen kaku Gothic Antique", Meiryo, Arial, sans-serif;
@@ -28,6 +29,19 @@
   img {
     width: 100%;
   }
+
+/*============= ヘッダー=============== */
+ header {
+  width: 100%;
+ } 
+ 
+.navarea{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
 
 /* 光沢仕切りバー */
   .light-topbar {
@@ -59,6 +73,8 @@
     height: 1px;
     background-color: #ffffff80;
   }
+
+  
 
   /* もっとみる・詳細へなどに飛ぶ青いボタン */
   .move {
@@ -154,14 +170,13 @@ main {
     }
 
   /*ヘッダー*/
-      header {
-        display: block;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: #1a1f20;
-        z-index: 200;
-      }
+    header {
+      display: block;
+      position: fixed;
+      top: 0;
+      background-color: #1a1f20;
+      z-index: 200;
+    }
 
     .navarea{
       display: flex;
@@ -182,7 +197,7 @@ main {
     }
 
   /*PC用ナビゲーション非表示*/
-  #nav-pc {
+  .navarea-pc, #nav-pc-search , #nav-pc {
     display: none;
   }
 
@@ -635,16 +650,182 @@ main {
     margin: 0 auto 0 auto;
   }
 
-/* ヘッダー(PC) */
-   header {
-    display: flex;
-    justify-content: space-between;
+  .span {
+    font-size: 1.3rem;
   }
 
- .navarea {
-  display: flex;
-  justify-content: baseline;
- }
+  header {
+    width: 100%;
+  }
+  /* 光沢ライトバー */
+  .light-mainbar {
+    width: 100%;
+    height: 0.3rem;
+    margin-left: 0;
+    display: inline-block;
+    border: none;
+    background: linear-gradient(to right, #004F59, #8Dfff8, #004F59);
+    }
+
+  /*ナビゲーションメニュー*/
+  .navarea-pc{
+    width: 100%; 
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  #logo {
+    width: 30rem;
+    margin: 1.5rem 0 1.5rem 1.5rem;
+  }
+
+  .menu-bar {
+    display: flex;
+    padding-right: 2rem;
+  }
+
+ /*SP用ナビゲーション非表示*/
+ 
+  .navarea {
+    display: none;
+  }
+
+  #nav-sp {
+    display: none;
+  }
+
+
+  /*PC版ナビゲーションメニュー*/
+  .hamburger-menu-pc {
+    width: 4.5rem;
+    margin-inline: 0.8rem;
+  }
+
+    #nav-pc {
+    background-color: #2a3638;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 50%;
+    z-index: 100;
+    display: none;
+    transition: right 0.3s ease; 
+    overflow-y: auto;
+    }
+
+
+
+  /*xボタン*/
+  .close {
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+  }
+
+  .close-1 {
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    align-items: baseline;
+  }
+
+  /* ナビ＝＝検索＝＝検索エリア表示 */
+
+  #nav-pc-search {
+    display: none;
+    justify-content: center;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%; /* 希望する幅に設定 */
+    height: 50px; /* 希望する高さに設定 */
+    padding: 10px; /* 内側の余白を設定 */
+    margin-block: 5px;  /* 外側の余白を設定 */
+    background-color: #1a1f2096; /* 背景色を設定（オプション） */
+    border: 1px solid #1a1f20; /* 境界線を設定（オプション） */
+  }
+
+  #search-query{
+    width: 85%;
+    left: 4rem;
+    top: 1rem;
+    padding: 10px;
+    padding-inline: 1rem;
+    background-color: #d0f9ffbb;
+  }
+
+  .search-icon {
+    display: flex;
+    width: 2.5rem;
+    height: 2rem;
+    margin-inline: 1rem;
+    background-color: #1a1f2096;
+    border: #1a1f2096;
+  }
+
+  /*ナビゲーションメニュー→カテゴリー*/
+  #nav-pc >.menu {
+  text-decoration: none;
+  display: block;
+  margin: 18px;
+  font-size: 18px;
+  }
+
+  .category {
+    font-size: 25px;
+    color: #3EFFF3;
+    margin: 4rem 0 0 0;
+  }
+
+  /*ナビゲーションのリンクの装飾設定*/
+  #nav-pc > a {
+    display: block;
+  }
+  #nav-pc > a:link {
+    color: #ffffff;
+  }
+  #nav-pc > a:visited {
+    color: #ffffff;
+  }
+  #nav-pc > a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  #nav-pc > a:active {
+    color: #ffffff;
+  }
+
+
+
+  /* タイトル */
+  .title-2pc {    /* 自己紹介のタイトル */
+    font-size: 1.7rem;
+    letter-spacing: 6px;
+    padding: 1rem 0 0.5rem 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
 
 
 
