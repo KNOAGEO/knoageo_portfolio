@@ -62,19 +62,59 @@
     background: linear-gradient(to right, #004F59, #8Dfff8, #004F59);
     }
 
-.inlinewrap{
+  .inlinewrap{
   display: block;
   margin-left: 4rem;
-}
+  }
 
-/* 水平線バー */
+  /* 水平線バー */
   hr {
     border: 0;
     height: 1px;
     background-color: #ffffff80;
   }
 
-  
+  .flex-box {  /*横並びにしたい時*/
+    display: flex;
+  }
+
+  .boldtitle {
+    font-weight: bold;
+    letter-spacing: 0.4rem;
+  }
+
+  /* ＝＝＝＝＝＝＝＝＝＝＝本コンテンツ共通部分＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+  /* タイトル */
+  .title-wrapper {
+    display: flex;
+  }
+
+  .title {
+    width: 60%;
+    letter-spacing: 6px;
+    padding: 1.2rem;
+  }
+
+  .title-2 {
+    display: block;
+    text-align: left;
+  }
+
+  .subtitle {
+    color: #ffffff65;
+  }
+
+  /* 説明 */
+  .date {
+    text-align: end;
+  }
+
+  /* 説明枠（白い枠線） */
+  .descarea {
+    border: 1px solid #ffffff;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
 
   /* もっとみる・詳細へなどに飛ぶ青いボタン */
   .move {
@@ -144,6 +184,24 @@
 /* リンクへ飛ぶ・大事な部分の白線 */
   .important-line {
     text-decoration: underline;
+  }
+
+  .linkarea {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sns-area {
+    display: flex;
+  }
+
+  .sns-icon-insta {
+  width: 3rem;
+  margin: 0.6rem 1rem;
+  }
+
+  .sns-icon-threads {
+    width: 4.2rem;
   }
 
 /* フォーム */
@@ -340,10 +398,8 @@ main {
       padding-inline: 1rem;
     }
     
-    
       /* カテゴリ共通 */
     .title-wrapper {
-      display: flex;
       align-items: baseline;
     }
 
@@ -358,16 +414,12 @@ main {
       display: flex;
     }
 
-  /* カテゴリ名 */
-    .title {
-      width: 60%;
+ /* タイトル　title */
+    .title { /* カテゴリ名 */
       font-size: 1.4rem;
-      letter-spacing: 6px;
-      padding: 1.2rem;
     }
-
-  /* 自己紹介-名前 */
-    .title-1 {
+  
+    .title-1 { /* 自己紹介-名前 */
       display: block;
       font-size: 1.5rem;
       letter-spacing: 5px;
@@ -376,8 +428,6 @@ main {
     }
             
     .title-2 {
-      display: block;
-      text-align: left;
       font-size: 1.2rem;
       margin: 10px;
     }
@@ -391,7 +441,6 @@ main {
 
     .subtitle {
       display: block;
-      color: #ffffff65;
       font-size: 1.2rem;
       padding-left: start;
     }
@@ -421,12 +470,6 @@ main {
 
     
     /* 説明枠（白い枠線） */
-    .descarea {
-        border: 1px solid #ffffff;
-        padding: 1rem;
-        margin: 1rem 0;
-      }
-
       .descarea-1 {
         border: 1px solid #ffffff;
         padding: 0.5rem;
@@ -437,6 +480,11 @@ main {
       .descarea-2 {
         display: block;
         border: 1px solid #ffffff;
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+
+      .descarea-3 {    /* aside　枠線なし　PC　普通の自己紹介欄・枠線アリSP */
         padding: 1rem;
         margin: 1rem 0;
       }
@@ -470,9 +518,17 @@ main {
       
       .date {
         font-size: 12px;
-        text-align: end;
         padding-inline-end: 20px;
         margin-bottom: 1rem;
+      }
+
+      .img-name {
+        width: 40%;
+        display: block;
+        text-align: left;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
       }
 
     .subcomment {
@@ -520,13 +576,10 @@ main {
   /* SNSエリア */
   .linkarea {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 0.5rem;
   }
 
   .sns-area {
-    display: flex;
     justify-content: space-between;
   }
 
@@ -537,6 +590,13 @@ main {
 
   .sns-icon-threads {
     width: 4.2rem;
+  }
+
+  .move {
+    padding: 10px 20px;        
+    border-radius: 5px;        /* ボタンの角を丸くする */
+    font-size: 12px;
+    font-weight: bold;           /* 文字のサイズ */
   }
 
     /*フッター（SP）*/
@@ -650,6 +710,10 @@ main {
     margin: 0 auto 0 auto;
   }
 
+  img {
+    width: 100%;
+  }
+
   .span {
     font-size: 1.3rem;
   }
@@ -657,6 +721,12 @@ main {
   header {
     width: 100%;
   }
+
+  main {
+    width: 100%;
+    margin-top: 0;
+  }
+
   /* 光沢ライトバー */
   .light-mainbar {
     width: 100%;
@@ -803,31 +873,222 @@ main {
     color: #ffffff;
   }
 
+/* メイン（TOP） */
+.cover > img{  /* cover PCクエリに移す */
+  height: 38rem;
+}
+
+ /* カテゴリ（セクション） */
+ .sec{      /*  PCクエリに移す(topページサイドバーあり */
+  padding-left: 1.5rem; 
+  display: flex;
+  justify-content: space-between;
+  }
+
+  .sec-1{      /*  PCクエリに移す（flexなし */
+    padding-left: 1.5rem; 
+    }
+
+/* main-contents-wrapper ※PCのみ*/
+.main-wrapper {
+  width: 68%;
+  padding-left: 0;
+}
+
+/* お知らせ欄 */
+.category-wrapper { 
+  display: flex;
+  align-items: baseline;
+  margin: 1rem 0 0 0;
+  padding-inline: 0.5rem;
+}
+
+.category-mainwrapper{ /* ※PCのみ*/
+  display: block;
+  align-items: baseline;
+  margin: 1rem 0 0 0;
+}
 
 
-  /* タイトル */
-  .title-2pc {    /* 自己紹介のタイトル */
+  /* タイトル　title */
+  /* カテゴリ（写真・イラスト・Weblog */
+  .title-wrapper {
+    align-items: center;
+  }
+
+  .title-wrapper-news { /* お知らせ用タイトル */
+    width: 25%;
+    display: block;
+    align-items: center;
+  }
+
+  .title-wrapper-profile {
+    display: block;
+    align-items: center;
+  }
+
+  .title-wrapper-profilename {   /* aside：自己紹介の名前欄タイトル */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .title-2 {    /* navメニューバーのタイトル・自己紹介のタイトル */
     font-size: 1.7rem;
     letter-spacing: 6px;
     padding: 1rem 0 0.5rem 0;
   }
 
+  .title-3 { /* 自己紹介のタイトル */
+    font-size: 1.7rem;
+    letter-spacing: 6px;
+    padding: 2rem 0 0.5rem 0;
+    text-align: center;
+  }
 
+  .title-4 {    /* 自己紹介の名前タイトル */
+    width: 62%;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    text-align: left;
+    padding-inline: 0.3rem 0;
+  }
 
+  .subtitle {   /* 不透明度65％の英字タイトル    */
+    font-size: 2rem;
+  }
 
+  .subtitle-pc-profile {   /* aside自己紹介タイトル用不透明度65％の英字タイトル    */
+    color: #ffffff65;
+    font-size: 1.6rem;
+    padding-bottom: 0.5rem;
+  }
 
+  .subtitle-pc-profile2 {   /* aside自己紹介マイネーム用不透明度65％の英字タイトル    */
+    color: #ffffff65;
+    font-size: 1rem;
+  }
 
+  .boldtitle {  /* pc */
+    font-size: 1.5rem;
+   }
 
+  /* 　説明　description */
+  .descarea {
+    width: 100%;
+  }
 
+  .descarea-3 {    /* aside＆お知らせ　枠線なし　PC　普通の自己紹介欄・枠線アリSP */
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+  }
 
+  .description { /* お知らせ内容 */
+    font-size: 1.3rem;
+    padding: 0 0 0 2rem;
+  }
 
+  .subcomment {
+    font-size: 13px;
+    display: flex;
+    text-align: right;
+    padding-inline-start: 1rem;
+  }
 
+  .img-name {     /* 作品名　※PC版のみ */
+    width: 40%;
+    display: block;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
 
+  .commentarea { /* 作品情報欄をひとくくりにする　※PC版のみ   */
+    display: block;
+    margin-left: auto;
+  }
 
+  #subcomment-pc { /* 作品情報 */
+    display: block;
+    text-align: right;
+  }
+
+  .desclist-left {
+    display: block;
+    text-align: left;
+    margin: 0;
+  }
+
+  .desclist-left p {
+    margin: 0 0 10px 0;
+    padding-left: 0.5rem;
+  }
   
-  
+  .pc-p-desc {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
 
+  .pc-p-desc > span {
+    font-size: 1rem;
+  }
 
+  /* 日にち date */
+  .date{
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  /* ボタン */
+  .move {
+    padding: 0.8rem 1.2rem;        /* ボタンの内側の余白 */
+    border-radius: 0.5rem;        /* ボタンの角を丸くする */
+    font-size: 1rem;        
+  }
+
+  /* SNSエリア */
+
+.linkarea {
+  display: block;
+  margin: 1rem 0;
+}
+
+.sns-area {
+  justify-content: center;
+}
+
+/* サイドバー */
+aside {
+  width: 30%;
+  margin-top: 2rem;
+  margin-right: 0;
+ }
+
+ aside > .descarea {
+  border: none;
+ }
+
+ .sidebar {
+   background-color: #004F59;
+ }
+
+ .desclist-left {
+   display: block;
+   text-align: left;
+   margin: 1rem 0;
+  }
+
+  .desclist-left p {
+   margin: 0 0 10px 0;
+   padding-left: 0.5rem;
+  }
 
 /*フッター（PC）*/
 .footerzone {

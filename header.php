@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style/themestyle-sp.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style/themestyle.css" />
     <?php wp_head(); ?>
   </head>
   <body>
