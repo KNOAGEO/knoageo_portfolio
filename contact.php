@@ -1,9 +1,11 @@
+<?php
 /*
 Template Name: Contactページ
 */
+?>
 <?php get_header()?>
 <main>
-    <div class="sec">
+    <div class="sec-1">
     <section>
      <div class="title-wrapper-2">
          <p class="title-1">お問い合わせ<br>ご依頼フォーム</p>
@@ -244,4 +246,4 @@ Template Name: Contactページ
   </div>  
 </div>
 </main>
-<?php get_footer('custom2')?>
+<?php get_footer('custom1')?>
