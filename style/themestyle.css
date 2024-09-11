@@ -62,6 +62,15 @@
     background: linear-gradient(to right, #004F59, #8Dfff8, #004F59);
     }
 
+    .light-shortbar {
+      width: 30%;
+      height: 0.3rem;
+      margin: 0;
+      display: inline-block;
+      border: none;
+      background: linear-gradient(to right, #004F59, #8Dfff8, #004F59);
+      }
+
   .inlinewrap{
   display: block;
   margin-left: 4rem;
@@ -69,18 +78,24 @@
 
   /* 水平線バー */
   hr {
-    border: 0;
-    height: 1px;
-    background-color: #ffffff80;
+    margin: 0.5rem;
   }
 
   .flex-box {  /*横並びにしたい時*/
     display: flex;
   }
 
+  li > img {
+    padding: 1rem;
+  }
+
   .boldtitle {
     font-weight: bold;
     letter-spacing: 0.4rem;
+  }
+
+  .empty {
+    padding: 3rem 0;
   }
 
   /* ＝＝＝＝＝＝＝＝＝＝＝本コンテンツ共通部分＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
@@ -116,6 +131,21 @@
     margin: 1rem 0;
   }
 
+   .descarea-1 {
+    border: 1px solid #ffffff;
+    margin: 1rem 0;
+  }
+
+  /* セクション2列並び */
+  .setsec {
+    display: flex;
+  }
+
+  .block {
+    display: block;
+    padding: 1rem;
+  }
+ 
   /* もっとみる・詳細へなどに飛ぶ青いボタン */
   .move {
     background-color: #319BB2;
@@ -128,7 +158,7 @@
     font-weight: bold;           /* 文字のサイズ */
     cursor: pointer;           /* カーソルをポインタにする */
     transition: background-color 0.3s, color 0.3s; /* アニメーションの効果 */
-    margin: 0.5rem;
+    margin: 0.8rem;
   }
   
   .move:hover {
@@ -159,7 +189,7 @@
     z-index: 1;
   }
   .slick-prev:before, .slick-next:before {
-    color: #000;
+    color: #fff;
   }
   .slick-slide {
     transition: all ease-in-out .3s;
@@ -217,8 +247,8 @@ main {
 スマートフォン版
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
 
-/*横幅設定※レスポンシブSP版*/
-@media screen and (max-width: 767px) {
+/*横幅設定※レスポンシブSP版*/ 
+@media screen and (max-width: 767px) { /*SP版*/ 
     body {
       min-width: 375px;
       margin: 0;
@@ -471,9 +501,7 @@ main {
     
     /* 説明枠（白い枠線） */
       .descarea-1 {
-        border: 1px solid #ffffff;
         padding: 0.5rem;
-        margin: 1rem 0;
         text-align: left;
       }
 
@@ -560,19 +588,10 @@ main {
       margin: 1rem 0;
     }
 
-    .setsec {
-      display: flex;
-    }
-
     .setsec > .descarea {
       width: 50%;
     }
 
-    .block {
-      display: block;
-      padding: 1rem;
-    }
-   
   /* SNSエリア */
   .linkarea {
     display: flex;
@@ -702,7 +721,7 @@ main {
 /* ＝＝＝＝＝＝＝＝＝＝
 　　　　PC版 　　　　
 ＝＝＝＝＝＝＝＝＝＝＝*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) { /*PC版*/ 
 /* 横幅設定 */
   body {
     max-width: 1280px;
@@ -778,14 +797,12 @@ main {
     right: 0;
     top: 0;
     height: 100vh;
-    width: 50%;
+    width: 30%;
     z-index: 100;
     display: none;
     transition: right 0.3s ease; 
     overflow-y: auto;
     }
-
-
 
   /*xボタン*/
   .close {
@@ -866,7 +883,7 @@ main {
     color: #ffffff;
   }
   #nav-pc > a:hover {
-    color: #ffffff;
+    color: #558a86;
     text-decoration: underline;
   }
   #nav-pc > a:active {
@@ -878,6 +895,14 @@ main {
   height: 38rem;
 }
 
+.cover-illust > img{  /* cover PCクエリに移す */
+ width: 100%;
+}
+
+.cover-profile > img{  /* cover PCクエリに移す */
+  width: 100%;
+ }
+
  /* カテゴリ（セクション） */
  .sec{      /*  PCクエリに移す(topページサイドバーあり */
   padding-left: 1.5rem; 
@@ -887,13 +912,28 @@ main {
 
   .sec-1{      /*  PCクエリに移す（flexなし */
     padding-left: 1.5rem; 
-    }
+  }
 
 /* main-contents-wrapper ※PCのみ*/
 .main-wrapper {
   width: 68%;
   padding-left: 0;
 }
+
+.setsec { 
+  display: flex;
+  margin: 1rem 0;
+ }
+
+.setsec > img {
+  width: 50%;
+}
+
+.setsec-2 { /* PC専 ブログ一覧のボタンとタイトルをbetween*/
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  }
 
 /* お知らせ欄 */
 .category-wrapper { 
@@ -934,6 +974,12 @@ main {
     margin-bottom: 0.5rem;
   }
 
+  .title-wrapper-profilename-2 {   /* profile：自己紹介の名前欄タイトル */
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
   .title {
     font-size: 2.5rem;
   }
@@ -959,6 +1005,17 @@ main {
     padding-inline: 0.3rem 0;
   }
 
+  .title-small {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .title-bluearea { /* ブログ・オリジナルサイト用小タイトル */
+    padding: 1.2rem;
+    text-align: center;
+    color: #3EFFF3;
+  }
+
   .subtitle {   /* 不透明度65％の英字タイトル    */
     font-size: 2rem;
   }
@@ -976,11 +1033,44 @@ main {
 
   .boldtitle {  /* pc */
     font-size: 1.5rem;
+    margin: 0 1rem 0 1rem;
    }
 
   /* 　説明　description */
   .descarea {
     width: 100%;
+  }
+
+  .descarea > p {
+    line-height: 1.5rem;
+  }
+  
+  .descarea-1 {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .descarea-1 > p {  /* 説明の中のフォント装飾 */
+    font-size: 1.1rem;
+    line-height: 2rem;
+    letter-spacing: 0.2rem;
+    padding-inline: 12rem;
+  }
+
+  .descarea-2 {    /* setsecのPC版・写真枠*/
+    border: 1px solid #ffffff;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .descarea-2 > img {    /* setsecのPC版・写真枠*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .descarea-3 {    /* aside＆お知らせ　枠線なし　PC　普通の自己紹介欄・枠線アリSP */
@@ -989,13 +1079,46 @@ main {
     width: 100%;
   }
 
+  .photo-zoom {    /* 写真をクリックすると拡大できるやつ */
+    margin: 1rem 0;
+    width: 60%;
+  }
+
   .description { /* お知らせ内容 */
     font-size: 1.3rem;
     padding: 0 0 0 2rem;
   }
 
+  .description-1 {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    margin: 0;
+  }
+
+  .description-2 { /*myprofile */
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0;
+    line-height: 1.5rem;
+  }
+
+  .description-center { /*説明文中央寄せ pc  */
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .pc-leftdescription {
+    text-align: left;
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+  }
+
   .subcomment {
-    font-size: 13px;
+    font-size: 1rem;
     display: flex;
     text-align: right;
     padding-inline-start: 1rem;
@@ -1006,9 +1129,14 @@ main {
     display: block;
     text-align: left;
     padding-left: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: 0.3rem;
   }
+
+  .img-name > p {     /* 作品名　※PC版のみ */
+    font-size: 1.5rem;
+  }
+
 
   .commentarea { /* 作品情報欄をひとくくりにする　※PC版のみ   */
     display: block;
@@ -1053,31 +1181,40 @@ main {
     font-size: 1rem;        
   }
 
-  /* SNSエリア */
+  .profileblock { 
+    display: block;
+    width: 50%;
+    padding: 1rem;
+   }
 
-.linkarea {
-  display: block;
-  margin: 1rem 0;
-}
 
-.sns-area {
-  justify-content: center;
-}
 
-/* サイドバー */
-aside {
-  width: 30%;
-  margin-top: 2rem;
-  margin-right: 0;
- }
 
- aside > .descarea {
-  border: none;
- }
+    /* SNSエリア */
 
- .sidebar {
-   background-color: #004F59;
- }
+  .linkarea {
+    display: block;
+    margin: 1rem 0;
+  }
+
+  .sns-area {
+    justify-content: center;
+  }
+
+  /* サイドバー */
+  aside {
+    width: 30%;
+    margin-top: 2rem;
+    margin-right: 0;
+  }
+
+  aside > .descarea {
+    border: none;
+  }
+
+  .sidebar {
+    background-color: #004F59;
+  }
 
  .desclist-left {
    display: block;
@@ -1090,55 +1227,58 @@ aside {
    padding-left: 0.5rem;
   }
 
-/*フッター（PC）*/
-.footerzone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
+  /*フッター（PC）*/  /* 補足：SPと共通部分がなさすぎたので一部同じですが統一していません。コード長くなることご容赦 */
 
-.footerzone img {
-  width: 18rem;
-  margin: 50px;
-}
+  .footerzone {
+    display: block;
+    text-align: center;
+  }
 
-.ft-contactarea {
-padding-inline: 2.5rem;
-text-align: start;
-}
+  footer > .light-mainbar {
+    width: 100%;
+  }
 
-.ft-contactarea p {
-  font-size: 0.8rem;
-}
+  .footerzone img {
+    width: 30rem;
+    margin: 5rem;
+  }
 
-.ft-contactarea span {
-  font-size: 0.6rem;
-  margin: 0;
-}
+  .ft-contactarea {   /* フッター：連絡欄 */
+    text-align: left; 
+    display: block;
+    max-width: 550px;
+    margin: 0 auto;
+  }
 
-.ft-centerarea {
-  display: block;
-text-align: center;
-margin: 6rem 0 0 0;
-}
+  .ft-contactarea p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
 
-.ft-centerarea p {
-  font-size: 0.8rem;
-  text-decoration: underline;
-}
+  .ft-contactarea span {
+    font-size: 1rem;
+    margin: 0;
+  }
 
-.ft-centerarea span {
-  font-size: 0.7rem;
-}
+  .ft-centerarea {
+    display: block;
+  text-align: center;
+  margin: 10rem 0 0 0;
+  }
 
-footer > .light-mainbar {
-  width: 100%;
-}
+  .ft-centerarea p {
+    font-size: 1.3rem;
+    line-height: 4rem;
+    text-decoration: underline;
+  }
 
-.copyright {
-  margin: 4rem 0 1rem 0;
-}
+  .ft-centerarea span {
+    font-size: 1rem;
+  }
+
+  .copyright {
+    margin: 6rem 0 2rem 0;
+  }
 
 
 

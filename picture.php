@@ -1,16 +1,20 @@
+<?php
 /*
 Template Name: Pictureページ
 */
+?>
 
 <?php get_header()?>
 <main>
-    <div class="sec">
+    <div class="sec-1">
 <section>
     <div class="title-wrapper">
 <p class="title">写真</p>
     <h2 class="subtitle">Picture</h2>
 </div>
+ <div class="cover">
     <img src="<?php echo get_template_directory_uri(); ?>/image/picture1.jpg">
+ </div>
     <div class="descarea-1">
     <span class="boldtitle">写真歴12年 （↑ 沖縄県南城市 ニライカナイ橋）</span><br><br>
     <p>中学の修学旅行で沖縄の美しい景色を残したかったがカメラを持っていなかった心残りで翌年デジカメを買ったのが始めたきっかけです。<br>
@@ -19,7 +23,7 @@ Template Name: Pictureページ
     </p>
     </div>
     <div class="setsec">
-    <div class="descarea">
+    <div class="descarea-1">
         <span class="boldtitle">機体とレンズ</span><br><hr><br>
         <p>NikonD850<br>
            NikonD7000<br><br>
@@ -30,7 +34,7 @@ Template Name: Pictureページ
             TOKINA 11-16mm
         </p>
     </div>
-    <div class="descarea">
+    <div class="descarea-2">
      <img src="<?php echo get_template_directory_uri(); ?>/image/picture2.jpeg" alt="一眼レフで太陽を撮る">
     </div>
 </div>

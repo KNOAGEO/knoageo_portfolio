@@ -3,7 +3,7 @@
 <main>
   <!--カバー-->
   <div class="cover">
-    <img src="<?php echo get_template_directory_uri(); ?>/./image/picture1.jpg" />
+    <img src="<?php echo get_template_directory_uri(); ?>/./image/D70_4509.jpg" />
   </div>
   <div class="sec">
   <div class="main-wrapper"> <!--スマホはメイン記事・PCは左の本記事-->
@@ -91,6 +91,7 @@
     <div class="category-mainwrapper">
     <div class="pc-p-desc">
       <p>【得意なコンセプト】<br>ナチュラル・シンプル・モダン</p><br>
+      <!-- 制作物が出来てから
       <p>ご依頼をもとに制作した作品です</p>
       <span style="color: rgba(255, 168, 109, 0.829);">※掲載に関しては依頼元の許可をいただいております</span><br>
       <p>Webサイト制作は随時受け付けていますので<br>ご相談・ご依頼はお問い合わせフォームまでお願いいたします</p>
@@ -103,12 +104,11 @@
         <p>HTML・CSS・JavaScript・php・jQuery</p><br>
         <h3>その他環境:</h3>
         <p>GitHub・VScode・WordPress・Local flywheel・Docker・Figma・MySQL・Adobe Photoshop・Illustrator</p>
-        <a href="<?php echo home_url( '/' ); ?>weblog/">
+        <a href="<?php echo home_url( '/' ); ?>weblog/">-->
         <button class="move">もっとみる➔</button></a>
       </div>
     </div>
   </section>
-  <hr class="light-mainbar" />
   </div>     <!-- main-wrapper close -->
 
   <!--その他関連--※中身がまだないため実装はあと。カルーセルに沿って説明切替を実装
@@ -152,7 +152,6 @@
           </div>
         <hr><br>
         <div class="desclist-left">
-        <p>＊生まれ： 1996年</p>
         <p>＊出身：佐賀県出身/愛知県在住</p>
         <p>＊趣味：写真撮影・絵描き・旅行・スノーボード・国立公園/道の駅/温泉巡り</p>
         <p>＊職業: soon</p>

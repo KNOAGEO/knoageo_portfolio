@@ -1,10 +1,12 @@
+<?php
 /*
 Template Name: Weblogページ
 */
+?>
 
 <?php get_header()?>
 <main>
-    <div class="sec">
+    <div class="sec-1">
 <section>
     <div class="title-wrapper">
 <p class="title">Webサイト作例</p>
@@ -19,17 +21,22 @@ Template Name: Weblogページ
         <li><img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="img055"></li>
       </ul>
 </div>
-<a href="<?php echo home_url( '/' ); ?>webloglib/"><button class="move">一覧はこちら➔</button></a>
-    <div class="descarea">
+<!--<a href="<?php echo home_url( '/' ); ?>webloglib/"><button class="move">一覧はこちら➔</button></a>-->
+    <div class="descarea-3">
+            <span class="boldtitle">タイトル入力</span><br><br>
+            <p>※カルーセルに沿ってタイトルと撮影情報（簡易に）＋説明文に切替え、カルーセルに載せるものは最新順
+            </p>
+        </div>
+        <hr class="light-mainbar" />
+    <div class="descarea-1">
     <span class="boldtitle">Webサイト制作歴半年</span><br><br>
-    <p>得意なことは写真やイラストで培った色彩感覚でコンセプトに沿ったデザインを実装することです。まだ未熟な点はありますが経験を積んで品質が高く
-        お客様にとって理想的なWebサイトを提供していきたいと思います
+    <p>得意なことは写真やイラストで培った色彩感覚でコンセプトに沿ったデザインを実装することです。まだ未熟な点はありますが経験を積んで品質が高くお客様にとって理想的なWebサイトを提供していきたいと思います
     </p>
     </div>
-    <div class="descarea">
+    <div class="descarea-1">
         <span class="boldtitle">制作環境</span><br><br>
-        <p>家で中規模～大規模な制作（Webサイトやアプリケーションなどの開発や制作）に取り掛かる時はWindowsPC、<br>
-           作業環境にとらわれず時間を有効活用して作業（メンテナンスや更新、修正）に取り掛かる時はMacBookPCを使っております<br>
+        <p>家で中規模～大規模な制作（Webサイト）に取り掛かる時はWindowsPC、<br>
+           作業環境にとらわれず時間を有効活用して作業（主にメンテナンスや更新、修正）に取り掛かる時はMacBookPCを使っております<br>
            PC内作業環境は共通です
         </p>
     </div>
@@ -40,6 +47,7 @@ Template Name: Weblogページ
         </div>
     </div>
     </section>
+    <!--=====================Web制作の実力がついてから公開！！
     <hr class="light-mainbar" />
     <section>
     <p class="title-3">制作ポイント</p>
@@ -53,7 +61,7 @@ Template Name: Weblogページ
         <p>私の願いはお客様の理想のサイトを形にする、実現がかなうことです。サイトを長く使い続けていただきたいので、細かい部分でもお気軽にリクエストしていただければと思います。お客様にとってすばらしいサイトが出来るよう、納得がいくようにヒアリングと打ち合わせを重ねていきます。
         </p>
     </div>
-    </section>
+    </section>-->
 </div>
 </main>
 <?php get_footer()?>

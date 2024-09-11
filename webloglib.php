@@ -1,6 +1,8 @@
+<?php
 /*
 Template Name: webloglibページ
 */
+?>
 <?php get_header()?>
 <main>
 <section>
