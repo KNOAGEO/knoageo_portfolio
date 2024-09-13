@@ -3,7 +3,7 @@
 <main>
   <!--カバー-->
   <div class="cover">
-    <img src="<?php echo get_template_directory_uri(); ?>/./image/D70_4509.jpg" />
+    <img src="<?php echo get_template_directory_uri(); ?>/./image/picture4.jpg" />
   </div>
   <div class="sec">
   <div class="main-wrapper"> <!--スマホはメイン記事・PCは左の本記事-->
@@ -12,11 +12,11 @@
     <div class="title-wrapper-news">
       <div class="title-2">お知らせ</div>
       </div>
-      <div class="descarea-3">
+      <div class="descarea-news">
       <div class="description">
-        <p>現在メンテナンス中です<br>(リサーチ機能・ブログ＆Webサイトページ実装中)</p>
+        <p>現在メンテナンス中です<br>(リサーチ機能・TEITEN・ブログページ実装中)<br>※お問い合わせはセキュリティ未対策のため動作しません※</p>
       </div>
-      <div class="date">2024.5.5</div>
+      <div class="date">2024.9.12</div>
     </div>
     </div>
   </section>
@@ -30,20 +30,20 @@
     </div>
     <img src="<?php echo get_template_directory_uri(); ?>/image/top-picture1.jpg">
     <div class="category-mainwrapper">
-     <div class="flex-box">
+     <div class="comment-box">
       <div class="img-name">
         <p>春日山の朝景色</p>
       </div>
       <div class="commentarea">
         <div class="subcomment">NikonD850 Nikkor24-70mm f2.8</div>
-          <div class="date">2024.5.5</div>
+          <div class="date">2023.12.2</div>
         </div>
       </div>
         <div class="descarea">
           <p>自然・伝統的な景色を主に撮っています<br>目覚め・静かな情熱を<br>感じさせる一瞬が好きです</p><br>
           <p>使用機種<br>＊Nikon D850<br>＊Nikon D7000</p>
         <a href="<?php echo home_url( '/' ); ?>picture/">
-        <button class="move">もっとみる➔</button></a>
+        <button class="move">写真について➔</button></a>
         </div>
     </div>
   </section>
@@ -55,22 +55,22 @@
     <p class="title">イラスト</p>
       <p class="subtitle">Illustration</p>
     </div>
-    <img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png">
+    <img src="<?php echo get_template_directory_uri(); ?>/image/にほんかもしか.png">
     <div class="category-mainwrapper">
-    <div class="flex-box">
+    <div class="comment-box">
       <div class="img-name">
         <p>にほんかもしか</p>
       </div>
       <div class="commentarea">
-        <div class="subcomment">にほんかもしか</div>
-        <div class="date">2024.5.5</div>
+        <div class="subcomment">にほんかもしか（ibisPaintX）</div>
+        <div class="date">2024.6.16</div>
         </div>
         </div>
           <div class="descarea">
             <p>動物・キャラクター・想像画<br>デジタルイラスト中心で描いています</p><br>
             <p>使用ソフト<br>＊ibisPaintX<br>＊Photoshop/Illustrator<br>＊CLIP STUDIO PAINT</p>
           <a href="<?php echo home_url( '/' ); ?>illustration/">
-          <button class="move">もっとみる➔</button></a>
+          <button class="move">イラストについて➔</button></a>
           </div>
       </div>
   </section>
@@ -83,9 +83,18 @@
       </div>
       <div class="slide">
       <ul class="slider">
+      <figure>
         <li><img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="img01"></li>
+        <figcaption class="desc-slide">10月にUP予定です</figcaption>
+      </figure>
+      <figure>
         <li><img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="img02"></li>
+        <figcaption class="desc-slide">comming soon</figcaption>
+      </figure>
+        <figure>  
         <li><img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="img03"></li>
+        <figcaption class="desc-slide">comming soon</figcaption>
+        </figure>
       </ul>
     </div>
     <div class="category-mainwrapper">
@@ -104,11 +113,13 @@
         <p>HTML・CSS・JavaScript・php・jQuery</p><br>
         <h3>その他環境:</h3>
         <p>GitHub・VScode・WordPress・Local flywheel・Docker・Figma・MySQL・Adobe Photoshop・Illustrator</p>
-        <a href="<?php echo home_url( '/' ); ?>weblog/">-->
-        <button class="move">もっとみる➔</button></a>
+        <a href="<?php echo home_url( '/' ); ?>weblog/">
+        <button class="move">もっとみる➔</button></a>-->
       </div>
     </div>
   </section>
+  <hr class="light-mainbar" />
+  <div class="empty"></div>
   </div>     <!-- main-wrapper close -->
 
   <!--その他関連--※中身がまだないため実装はあと。カルーセルに沿って説明切替を実装
@@ -141,14 +152,14 @@
   <section class="profile-cor">
     <div class="title-wrapper-profile">
     <p class="title-3">自己紹介</p>
-    <p class="subtitle-pc-profile">Profile</p>
+    <p class="subtitle-profile">Profile</p>
    </div>
     <img src="<?php echo get_template_directory_uri(); ?>/image/myprofile3.jpg">
     <div class="category-wrapper">
       <div class="descarea-3">
         <div class="title-wrapper-profilename">
           <p class="title-4">森 真由美</p>
-          <p class="subtitle-pc-profile2">Mayumi Mori</p>
+          <p class="subtitle-profile2">Mayumi Mori</p>
           </div>
         <hr><br>
         <div class="desclist-left">
@@ -171,6 +182,26 @@
     <div>
       <a href="<?php echo home_url( '/' ); ?>profile/">
       <button class="move">詳細はこちら➔</button></a>
+    </div>
+      </div> 
+    </div>
+  </div>
+  </section>
+  <section class="teiten">
+  <div class="title-wrapper-profile">
+    <p class="title-3">TEITEN</p>
+   </div>
+    <img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png">
+    <div class="category-wrapper">
+      <div class="descarea-3">
+        <hr>
+        <div class="desclist-left">
+        <p>2024.11 OPENING SOON</p>
+      </div>
+       <hr>
+<!--TEITEN実装後、30日分たまったら追加
+      <a href="<?php echo home_url( '/' ); ?>picturelib#teiten/">
+      <button class="move">過去の定点写真集➔</button></a>-->
     </div>
       </div> 
     </div>

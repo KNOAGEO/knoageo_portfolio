@@ -7,7 +7,7 @@
         <div class="footerzone">
         <a href="#" class="footerlogo">
           <img src="<?php echo get_template_directory_uri(); ?>/image/KNOAGEOロゴ1.png" alt="トップページに戻る"></a><br>
-      <span id="copyright">&copy;2025 KNOAGEO</span>
+          <div class="copyright">&copy;2025 KNOAGEO</div>
         </div>
       </footer>
       <!-- jQueryをCDNで導入するためのコード -->

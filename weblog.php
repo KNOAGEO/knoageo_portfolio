@@ -14,11 +14,18 @@ Template Name: Weblogページ
 </div>
 <div class="slide">
     <ul class="slider">
+    <figure>
         <li><img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="img01"></li>
+        <figcaption class="desc-slide">10月にUP予定です</figcaption>
+      </figure>
+      <figure>
         <li><img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="img02"></li>
+        <figcaption class="desc-slide">comming soon</figcaption>
+      </figure>
+        <figure>  
         <li><img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="img03"></li>
-        <li><img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="img04"></li>
-        <li><img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="img055"></li>
+        <figcaption class="desc-slide">comming soon</figcaption>
+        </figure>
       </ul>
 </div>
 <!--<a href="<?php echo home_url( '/' ); ?>webloglib/"><button class="move">一覧はこちら➔</button></a>-->

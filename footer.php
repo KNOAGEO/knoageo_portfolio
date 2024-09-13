@@ -5,7 +5,7 @@
   </div>
   <div class="ft-contactarea">
     <p>e-mail: receptionmail@knoageo7.com</p><br>
-    <p>対応時間: 6:00-19:00<br><span>随時返信いたしますが、半日～1日お待ちいただく場合がございます</span></p>
+    <p><span>随時返信いたしますが、半日～1日お待ちいただく場合がございます</span></p>
   </div>
   <div class="ft-centerarea">
     <a href="<?php echo home_url(); ?>/contact"><p>お問い合わせ・ご依頼や相談はこちら</p></a><br>

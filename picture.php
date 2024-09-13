@@ -44,16 +44,30 @@ Template Name: Pictureページ
     <p class="title-3">写真作例</p>
     <div class="slide">
     <ul class="slider">
-        <li><img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="img01"></li>
-        <li><img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="img02"></li>
-        <li><img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="img03"></li>
+    <figure>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/image/黒部湖.jpg" alt="黒部湖"></li>
+        <figcaption class="desc-slide"><span class="boldtitle">黒部湖</span><br><br>
+        <p>中部山岳国立公園-立山黒部-<br>（富山県立山町）<br>NikonD850/2023.10.29<!--※カルーセルに沿ってタイトルと撮影情報（簡易に）＋説明文に切替え、カルーセルに載せるものは最新順--></figcaption>
+      </figure>
+      <figure>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/image/美瑛.jpg" alt="美瑛"></li>
+        <figcaption class="desc-slide"><span class="boldtitle">美瑛の丘の夕景</span><br><br>
+        <p>北海道美瑛市<br>NikonD7000/2019.9.15<!--※カルーセルに沿ってタイトルと撮影情報（簡易に）＋説明文に切替え、カルーセルに載せるものは最新順--></figcaption>
+      </figure>
+        <figure>  
+        <li><img src="<?php echo get_template_directory_uri(); ?>/image/チングルマ.jpg" alt="チングルマ"></li>
+        <figcaption class="desc-slide"><span class="boldtitle">駒ヶ岳のチングルマ</span><br><br>
+        <p>中央アルプス国定公園<br>（長野県駒ケ根市）<br>NikonD850/2023.9.30 <!--※カルーセルに沿ってタイトルと撮影情報（簡易に）＋説明文に切替え、カルーセルに載せるものは最新順--></figcaption>
+        </figure>
+        <figure>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/image/picture4.jpg" alt="奥入瀬"></li>
+        <figcaption class="desc-slide"><span class="boldtitle">奥入瀬渓流「躍動」</span><br><br>
+        <p>十和田八幡平国立公園<br>（青森県十和田市）<br>NikonD7000/2022.6.19 <!--※カルーセルに沿ってタイトルと撮影情報（簡易に）＋説明文に切替え、カルーセルに載せるものは最新順--></figcaption>
+       </figure>
       </ul>
     </div>
-        <div class="descarea">
-        <span class="boldtitle">タイトル入力</span><br><br>
-        <p>※カルーセルに沿ってタイトルと撮影情報（簡易に）＋説明文に切替え、カルーセルに載せるものは最新順
-        </p>
-        <a href="picturelib.html"><button class="move">もっとみる➔</button></a>
+    <!--TEITEN写真が30日分たまったら公開
+        <a href="picturelib.html"><button class="move">もっとみる➔</button></a>-->
     </div>
     </section>
     <hr class="light-mainbar" />
@@ -61,10 +75,11 @@ Template Name: Pictureページ
         <p class="title-3">TEITEN</p>
             <img src="<?php echo get_template_directory_uri(); ?>/image/comming soonイラスト.png" alt="未実装です">
             <div class="descarea">
-            <span class="boldtitle">タイトル入力</span><br><br>
-            <p>写真は固定、定点写真が撮れたら更新</p>
+            <span class="boldtitle">2024/11 OPEN</span><br><br>
+            <p>本日の定点写真をお届けします</p>
+<!--TEITEN写真が30日分たまったら公開
             <a href="<?php echo home_url( '/' ); ?>picturelib/TEITEN"><button class="move">過去の定点写真はこちら➔</button></a>
-        </div>
+        --></div>
     </section>
 </div>
 </main>
